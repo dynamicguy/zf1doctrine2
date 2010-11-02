@@ -9,8 +9,10 @@
 
 <?php foreach($this->posts as $post): ?>
 <tr>
-    <td><a href="/blog/post/view/id/<?php echo $post->getId(); ?>/<?php echo $post->getSlug(); ?>"><?php echo $post->getTitle(); ?></a></td>
-    <td><?php echo substr($post->getContent(), -100); ?></td>
+    <td>
+        <a href="/blog/post/view/id/<?php echo $post->getId(); ?>/<?php echo $post->getSlug(); ?>"><?php echo $post->getTitle(); ?></a>
+    </td>
+    <td><?php echo substr($post->getContent(), -100); ?>...</td>
     <td>
         <a href="/blog/post/edit/id/<?php echo $post->getId(); ?>">Edit</a> |
         <a href="/blog/post/delete/id/<?php echo $post->getId(); ?>">Delete</a>

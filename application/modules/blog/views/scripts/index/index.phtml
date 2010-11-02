@@ -1,9 +1,21 @@
+<a href="/blog/post/create">Add new post</a>
 <?php if($this->posts): ?>
 
 <?php foreach($this->posts as $post): ?>
 <h3><a href="/blog/post/view/id/<?php echo $post->getId(); ?>/<?php echo $post->getSlug(); ?>"><?php echo $post->getTitle(); ?></a></h3>
-    <small>published on: <?php echo $post->getUpdated()->format(DateTime::RFC2822); ?> | <?php echo count($post->getComments()); ?> comments</small>
+<small>published on: <?php echo $post->getUpdated()->format(DateTime::RFC2822); ?> | <?php echo count($post->getComments()); ?> comments |
+<a href="/blog/post/edit/id/<?php echo $post->getId(); ?>">Edit this post</a> |
+<a href="/blog">back to all</a>
+</small>
     <p><?php echo $post->getContent(); ?></p>
 <?php endforeach; ?>
+
+<?php else: ?>
+
+    <p>
+        No post found. if you read this first time, you might also be interested
+        to generate some dummy data. deal? Okay
+        <a href="/blog/index/setup">get me some dummy data</a>
+    </p>
 
 <?php endif; ?>

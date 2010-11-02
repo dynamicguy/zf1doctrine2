@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('LIB_PATH'))
-    define('LIB_PATH', '/home/dynamicguy/public_html/phpxperts/library');
+    define('LIB_PATH', '/home/dynamicguy/public_html/zf1doctrine2/library');
 
 require_once LIB_PATH . '/Doctrine/Common/ClassLoader.php';
 

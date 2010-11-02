@@ -1,6 +1,8 @@
 <?php
+
 class Application_Api_Util_Bootstrap
 {
+
     /**
      * Resource ArrayObject contains all bootstrap classes
      *
@@ -45,4 +47,5 @@ class Application_Api_Util_Bootstrap
         $bootstrap = self::getBootstrap();
         return $bootstrap->getOption($option);
     }
+
 }

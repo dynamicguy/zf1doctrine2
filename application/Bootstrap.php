@@ -33,4 +33,5 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $this->_view->headTitle('phpXperts seminar 2010');
         $this->_view->headTitle()->setSeparator(' - ');
     }
+
 }
