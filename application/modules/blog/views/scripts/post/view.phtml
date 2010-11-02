@@ -1,0 +1,19 @@
+<h3><a href=""><?php echo $this->post->getTitle(); ?></a></h3>
+<small>published on: <?php echo $this->post->getUpdated()->format(DateTime::RFC2822); ?> | <?php echo count($this->post->getComments()); ?> comments |
+<a href="/blog/post/edit/id/<?php echo $this->post->getId(); ?>">Edit this post</a> |
+<a href="/blog">back to all</a>
+</small>
+<p><?php echo $this->post->getContent(); ?></p>
+
+<h4>Comments</h4>
+<?php if(count($this->post->getComments())): ?>
+<?php foreach($this->post->getComments() as $comment): ?>
+<h5><a href="<?php echo $comment->getAuthorUrl(); ?>"><?php echo $comment->getAuthor(); ?></a></h5>
+<p><?php echo $comment->getContent(); ?></p>
+<?php endforeach ?>
+<?php else: ?>
+<p>No comment found. be first to comment o this post!</p>
+<?php endif; ?>
+
+<?php echo $this->commentForm; ?>
+
