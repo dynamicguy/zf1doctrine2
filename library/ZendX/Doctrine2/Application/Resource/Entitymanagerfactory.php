@@ -20,6 +20,7 @@
  * @category   ZendX
  * @package    ZendX_Application
  * @subpackage Resource
+ * @author     Giorgio Sironi <NakedPhp>
  * @author     Nurul Ferdous <nurul.ferdous@gmail.com>
  */
 class ZendX_Doctrine2_Application_Resource_Entitymanagerfactory extends Zend_Application_Resource_ResourceAbstract

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * LayoutSwitcher plugin for moduler setup
+ *
+ * @category   Plugin
+ * @author     Nurul Ferdous <nurul.ferdous@gmail.com>
+ */
 class App_Controller_Plugin_LayoutSwitcher extends Zend_Layout_Controller_Plugin_Layout
 {
 
