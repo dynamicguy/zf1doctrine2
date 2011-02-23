@@ -12,7 +12,7 @@ require_once 'Zend/Exception.php';
  * @package   ZendX
  * @uses      Zend_Exception
  */
-class ZendX_Exception extends Zend_Exception
+class ZendX_Doctrine2_Exception extends Zend_Exception
 {
 
 }
