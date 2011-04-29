@@ -1,9 +1,18 @@
 <?php
 
+/**
+ * @todo set library path
+ * @todo find and replace your current module name. such as "default"
+ */
 if (!defined('LIB_PATH'))
-    define('LIB_PATH', '/home/dynamicguy/public_html/phpxperts/library');
+    define('LIB_PATH', '/Users/ferdous/Projects/php/zf1doctrine2/library');
 
 require_once LIB_PATH . '/Doctrine/Common/ClassLoader.php';
+
+// loading and parsing module config
+require_once LIB_PATH.'/ZendX/Doctrine2/parser.php';
+$ini = Ini_Struct::parse('../configs/module.ini');
+
 
 $classLoader = new \Doctrine\Common\ClassLoader('Doctrine\ORM', LIB_PATH);
 $classLoader->register();
@@ -19,7 +28,7 @@ $classLoader = new \Doctrine\Common\ClassLoader('Proxies', realpath(__DIR__ . '.
 $classLoader->register();
 
 $config = new \Doctrine\ORM\Configuration();
-$cache = new \Doctrine\Common\Cache\ArrayCache();
+$cache = new $ini['default']['resources']['entitymanagerfactory']['cache'];
 
 $config->setMetadataCacheImpl($cache);
 $config->setQueryCacheImpl($cache);
@@ -29,24 +38,11 @@ $driverImpl = $config->newDefaultAnnotationDriver(array(realpath(__DIR__ . "/../
 $config->setMetadataDriverImpl($driverImpl);
 
 $config->setProxyDir(realpath(__DIR__ . '/../proxies'));
-$config->setProxyNamespace('Proxies');
+$config->setProxyNamespace($ini['default']['resources']['entitymanagerfactory']['proxyNamespace']);
 
-$config->setAutoGenerateProxyClasses(true);
+$config->setAutoGenerateProxyClasses($ini['default']['resources']['entitymanagerfactory']['autoGenerateProxyClasses']);
 
-//$connectionOptions = array(
-//    'driver' => 'pdo_sqlite',
-//    'path' => 'database.sqlite'
-//);
-
-$connectionOptions = array(
-    'driver' => 'pdo_mysql', // postgresql driver
-    'user' => 'root',
-    'password' => 'f',
-    'host' => 'localhost',
-    'dbname' => 'phpxperts'
-);
-
-
+$connectionOptions = $ini['default']['resources']['entitymanagerfactory']['connectionOptions'];
 
 $em = \Doctrine\ORM\EntityManager::create($connectionOptions, $config);
 

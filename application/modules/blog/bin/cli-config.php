@@ -1,17 +1,17 @@
 <?php
 
-// loading and parsing module config
-require_once './parser.php';
-$ini = Ini_Struct::parse('../configs/module.ini');
-
 /**
  * @todo set library path
  * @todo find and replace your current module name. such as "blog"
  */
 if (!defined('LIB_PATH'))
-    define('LIB_PATH', '/home/dynamicguy/public_html/zf1doctrine2/library');
+    define('LIB_PATH', '/Users/ferdous/Projects/php/zf1doctrine2/library');
 
 require_once LIB_PATH . '/Doctrine/Common/ClassLoader.php';
+
+// loading and parsing module config
+require_once LIB_PATH . '/ZendX/Doctrine2/parser.php';
+$ini = Ini_Struct::parse('../configs/module.ini');
 
 $classLoader = new \Doctrine\Common\ClassLoader('Doctrine\ORM', LIB_PATH);
 $classLoader->register();
