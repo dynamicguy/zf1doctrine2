@@ -53,7 +53,7 @@ class ConvertMappingCommand extends Console\Command\Command
         ->setDescription('Convert mapping information between supported formats.')
         ->setDefinition(array(
             new InputOption(
-                'filter', null, InputOption::PARAMETER_REQUIRED | InputOption::PARAMETER_IS_ARRAY,
+                'filter', null, InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
                 'A string pattern used to match entities that should be processed.'
             ),
             new InputArgument(
@@ -64,19 +64,37 @@ class ConvertMappingCommand extends Console\Command\Command
                 'The path to generate your entities classes.'
             ),
             new InputOption(
+                'force', null, InputOption::VALUE_NONE,
+                'Force to overwrite existing mapping files.'
+            ),
+            new InputOption(
                 'from-database', null, null, 'Whether or not to convert mapping information from existing database.'
             ),
             new InputOption(
-                'extend', null, InputOption::PARAMETER_OPTIONAL,
+                'extend', null, InputOption::VALUE_OPTIONAL,
                 'Defines a base class to be extended by generated entity classes.'
             ),
             new InputOption(
-                'num-spaces', null, InputOption::PARAMETER_OPTIONAL,
+                'num-spaces', null, InputOption::VALUE_OPTIONAL,
                 'Defines the number of indentation spaces', 4
-            )
+            ),
         ))
         ->setHelp(<<<EOT
 Convert mapping information between supported formats.
+
+This is an execute <info>one-time</info> command. It should not be necessary for
+you to call this method multiple times, escpecially when using the <comment>--from-database</comment>
+flag.
+
+Converting an existing databsae schema into mapping files only solves about 70-80%
+of the necessary mapping information. Additionally the detection from an existing
+database cannot detect inverse associations, inheritance types,
+entities with foreign keys as primary keys and many of the
+semantical operations on associations such as cascade.
+
+<comment>Hint:</comment> There is no need to convert YAML or XML mapping files to annotations
+every time you make changes. All mapping drivers are first class citizens
+in Doctrine 2 and can be used as runtime mapping for the ORM.
 EOT
         );
     }
@@ -96,7 +114,8 @@ EOT
             );
         }
 
-        $cmf = new DisconnectedClassMetadataFactory($em);
+        $cmf = new DisconnectedClassMetadataFactory();
+        $cmf->setEntityManager($em);
         $metadata = $cmf->getAllMetadata();
         $metadata = MetadataFilter::filter($metadata, $input->getOption('filter'));
 
@@ -120,6 +139,7 @@ EOT
 
         $cme = new ClassMetadataExporter();
         $exporter = $cme->getExporter($toType, $destPath);
+        $exporter->setOverwriteExistingFiles( ($input->getOption('force') !== false) );
 
         if ($toType == 'annotation') {
             $entityGenerator = new EntityGenerator();

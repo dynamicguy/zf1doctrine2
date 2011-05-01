@@ -1,0 +1,40 @@
+/* Table Style */
+
+table {
+	width: 100%;
+	margin: 0 0 15px;
+	text-align: left;
+	font-size: inherit;
+	border-collapse: collapse;
+	border: 1px solid #c4c4c4;
+}
+
+table thead {
+	color: #666;
+}
+
+table th {
+	font-weight: normal;
+	padding: 5px 8px;
+	color: #666;
+	background: #e5e5e5;
+}
+
+table td {
+	padding: 8px;
+	color: #000;
+	border-top: 1px solid #c4c4c4;
+}
+
+table td span.active { color: #55a34a;}
+table td span.pending { color: #c5a059;}
+table td span.closed { color: #a02b2b;}
+
+table tr {
+	border-top: none;
+	background: #f9f9f9;
+}
+
+table .odd {
+	background: #fff; 
+}

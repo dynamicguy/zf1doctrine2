@@ -21,6 +21,8 @@
 
 namespace Doctrine\DBAL\Schema;
 
+use Doctrine\DBAL\Platforms\AbstractPlatform;
+
 /**
  * The abstract asset allows to reset the name of all assets without publishing this to the public userland.
  *
@@ -40,6 +42,8 @@ abstract class AbstractAsset
      */
     protected $_name;
 
+    protected $_quoted = false;
+
     /**
      * Set name of this asset
      *
@@ -47,7 +51,33 @@ abstract class AbstractAsset
      */
     protected function _setName($name)
     {
+        if ($this->isQuoted($name)) {
+            $this->_quoted = true;
+            $name = $this->trimQuotes($name);
+        }
         $this->_name = $name;
+    }
+
+    /**
+     * Check if this identifier is quoted.
+     *
+     * @param  string $identifier
+     * @return bool
+     */
+    protected function isQuoted($identifier)
+    {
+        return (isset($identifier[0]) && ($identifier[0] == '`' || $identifier[0] == '"'));
+    }
+
+    /**
+     * Trim quotes from the identifier.
+     * 
+     * @param  string $identifier
+     * @return string
+     */
+    protected function trimQuotes($identifier)
+    {
+        return trim($identifier, '`"');
     }
 
     /**
@@ -61,6 +91,18 @@ abstract class AbstractAsset
     }
 
     /**
+     * Get the quoted representation of this asset but only if it was defined with one. Otherwise
+     * return the plain unquoted value as inserted.
+     *
+     * @param AbstractPlatform $platform
+     * @return string
+     */
+    public function getQuotedName(AbstractPlatform $platform)
+    {
+        return ($this->_quoted) ? $platform->quoteIdentifier($this->_name) : $this->_name;
+    }
+
+    /**
      * Generate an identifier from a list of column names obeying a certain string length.
      *
      * This is especially important for Oracle, since it does not allow identifiers larger than 30 chars,
@@ -68,13 +110,13 @@ abstract class AbstractAsset
      * very long names.
      *
      * @param  array $columnNames
-     * @param  string $postfix
+     * @param  string $prefix
      * @param  int $maxSize
      * @return string
      */
-    protected function _generateIdentifierName($columnNames, $postfix='', $maxSize=30)
+    protected function _generateIdentifierName($columnNames, $prefix='', $maxSize=30)
     {
-        $columnCount = count($columnNames);
+        /*$columnCount = count($columnNames);
         $postfixLen = strlen($postfix);
         $parts = array_map(function($columnName) use($columnCount, $postfixLen, $maxSize) {
             return substr($columnName, -floor(($maxSize-$postfixLen)/$columnCount - 1));
@@ -85,6 +127,17 @@ abstract class AbstractAsset
         // using implicit schema support of DB2 and Postgres there might be dots in the auto-generated
         // identifier names which can easily be replaced by underscores.
         $identifier = str_replace(".", "_", $identifier);
-        return $identifier;
+
+        if (is_numeric(substr($identifier, 0, 1))) {
+            $identifier = "i" . substr($identifier, 0, strlen($identifier)-1);
+        }
+
+        return $identifier;*/
+
+
+        $hash = implode("", array_map(function($column) {
+            return dechex(crc32($column));
+        }, $columnNames));
+        return substr(strtoupper($prefix . "_" . $hash), 0, $maxSize);
     }
 }

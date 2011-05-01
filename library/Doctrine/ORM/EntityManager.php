@@ -96,12 +96,16 @@ class EntityManager
     private $proxyFactory;
 
     /**
-     * @var ExpressionBuilder The expression builder instance used to generate query expressions.
+     * The expression builder instance used to generate query expressions.
+     *
+     * @var Doctrine\ORM\Query\Expr
      */
     private $expressionBuilder;
 
     /**
      * Whether the EntityManager is closed or not.
+     *
+     * @var bool
      */
     private $closed = false;
 
@@ -118,8 +122,12 @@ class EntityManager
         $this->conn = $conn;
         $this->config = $config;
         $this->eventManager = $eventManager;
-        $this->metadataFactory = new ClassMetadataFactory($this);
+
+        $metadataFactoryClassName = $config->getClassMetadataFactoryName();
+        $this->metadataFactory = new $metadataFactoryClassName;
+        $this->metadataFactory->setEntityManager($this);
         $this->metadataFactory->setCacheDriver($this->config->getMetadataCacheImpl());
+        
         $this->unitOfWork = new UnitOfWork($this);
         $this->proxyFactory = new ProxyFactory($this,
                 $config->getProxyDir(),
@@ -159,7 +167,7 @@ class EntityManager
      *         ->where($expr->orX($expr->eq('u.id', 1), $expr->eq('u.id', 2)));
      * </code>
      *
-     * @return ExpressionBuilder
+     * @return Doctrine\ORM\Query\Expr
      */
     public function getExpressionBuilder()
     {
@@ -350,13 +358,17 @@ class EntityManager
 
         // Check identity map first, if its already in there just return it.
         if ($entity = $this->unitOfWork->tryGetById($identifier, $class->rootEntityName)) {
-            return $entity;
+            return ($entity instanceof $class->name) ? $entity : null;
         }
-        if ( ! is_array($identifier)) {
-            $identifier = array($class->identifier[0] => $identifier);
+        if ($class->subClasses) {
+            $entity = $this->find($entityName, $identifier);
+        } else {
+            if ( ! is_array($identifier)) {
+                $identifier = array($class->identifier[0] => $identifier);
+            }
+            $entity = $this->proxyFactory->getProxy($class->name, $identifier);
+            $this->unitOfWork->registerManaged($entity, $identifier, array());
         }
-        $entity = $this->proxyFactory->getProxy($class->name, $identifier);
-        $this->unitOfWork->registerManaged($entity, $identifier, array());
 
         return $entity;
     }
@@ -386,7 +398,7 @@ class EntityManager
 
         // Check identity map first, if its already in there just return it.
         if ($entity = $this->unitOfWork->tryGetById($identifier, $class->rootEntityName)) {
-            return $entity;
+            return ($entity instanceof $class->name) ? $entity : null;
         }
         if ( ! is_array($identifier)) {
             $identifier = array($class->identifier[0] => $identifier);
@@ -609,6 +621,16 @@ class EntityManager
         if ($this->closed) {
             throw ORMException::entityManagerClosed();
         }
+    }
+
+    /**
+     * Check if the Entity manager is open or closed.
+     * 
+     * @return bool
+     */
+    public function isOpen()
+    {
+        return (!$this->closed);
     }
 
     /**

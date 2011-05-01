@@ -1,0 +1,95 @@
+body {
+    font: 12px/1.8em 'Lucida Grande', "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    color: #222;
+    background-color: #EFEFEF;
+    margin: 0px auto;
+    height: 100%;
+}
+#tmsecure-logo{height: 140px;}
+#footer{text-align: center;}
+#tmsecure-wrapper{padding: 20px;}
+h1,h2,h3
+{
+    font-weight:   bold;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    padding: 2px 4px 2px 0px;
+    display: inline-block;
+
+}
+ul.menu
+{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.menu li
+{
+    padding-left: 0;
+    margin-right: 10px;
+    display: inline;
+}
+.right{
+    text-align: right;    
+}
+.pad{padding: 5px;}
+.padded{padding: 15px;}
+.shadow{
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+#tmsecure-search-field{width: 155px;}
+#tmsecure-utils{
+    font-size: 12px;
+}
+#tmsecure-utils p{margin-right: 5px;}
+#tmsecure-content-wrapper{
+    background-color:           white;
+    -moz-border-radius:         16px;
+    -webkit-border-radius:      16px;
+    border-radius:              16px;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+.content{
+    padding: 15px 5px;
+    word-wrap: break-word;
+}
+a{
+    color:           #08C;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.rounded, #sheet input, .error {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+}
+
+.error {
+    background-color:#E8FF6D;
+    padding:4px;
+    -webkit-box-shadow: #000 0 0 12px;
+    -moz-box-shadow: #000 0 0 12px;
+}
+
+/* nested arrow inside error message. It's 100% CSS. No images. */
+.error em {
+    border:10px solid;
+    border-color:#E8FF6D transparent transparent;
+    bottom:-17px;
+    display:block;
+    height:0;
+    left:10px;
+    position:absolute;
+    width:0;
+}

@@ -1,0 +1,140 @@
+.tms-form{
+    border:1px solid #ccc;
+    background:#fff url(../images/h600.png) repeat-x;
+    padding:20px;
+    width: 70%;
+}
+.tms-form.full{
+    width: 98%;
+}
+
+form.tms-form p.desc{
+    font-size: small;
+    font-family: caption;
+    font-weight: 400;
+    text-shadow: 0 1px 1px #F8FCEE;
+    color:#777;
+    margin:0;
+    padding-bottom: 10px;
+}
+
+.tms-form dl{
+    overflow: auto;
+}
+.tms-form dt {
+    float:left;
+    clear: both;
+    display:block;
+    text-align:right;
+    width: 35%;
+}
+
+.tms-form dd {
+    float:left;
+    display: block;
+    margin:2px 0 10px 10px;
+    padding-left: 10px;
+    text-align: left;
+    width: 60%;
+}
+
+.tms-form label{
+    color:#2B3C45;
+    font-weight:bold;
+    line-height: 2em;
+    text-shadow: 0 1px 1px #F8FCEE;
+}
+
+label.right-lebel{
+    color:#666666;
+    text-align: right;
+    border: none;
+    margin:0;
+    padding: 0px 3px;
+}
+
+dt.section-heading{
+    font-weight:bold;
+    text-align: left;
+    color:gray;
+    border-bottom: 1px solid #ddd;
+    padding-bottom:5px;
+    margin:20px 0 15px;
+    width:400px;
+}
+
+.tms-form .small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    width:150px;
+}
+
+.tms-form input[type=text], .tms-form input[type=password] {
+    padding:5px 3px;
+    border: 1px solid #aacfe4;
+    margin:0;
+    width: 90%;
+}
+
+input.input-medium, select.select-medium {
+    padding:4px 2px;
+    border: 1px solid #aacfe4;
+    width:100px;
+    margin:0;
+}
+
+
+.tms-form select {
+    padding:4px 2px;
+    border: 1px solid #aacfe4;
+    margin:0;
+}
+
+.tms-form textarea {
+    padding:4px 2px;
+    border: 1px solid #aacfe4;
+    width: 90%;
+    height: 100px;
+}
+
+.tms-form option {
+    @padding:4px 2px;
+}
+
+.tms-form input.radio{
+    display: inline;
+    border: none;
+    float: none;
+    width:20px;
+}
+
+.tms-form p.errors, .error {
+    color: #ff0000;
+    font-size: small;
+    font-family: caption;
+    clear:both;
+    padding:0;
+}
+
+.tms-form dd input.error, .tms-form dd textarea.error, .tms-form dd select.error {
+    border: 1px #ff0000 solid;
+}
+.readonly{background-color:#F3F4F4}
+.required{color: red}
+.button{
+    background: #222 url(../images/alert-overlay.png) repeat-x;
+    display: inline-block;
+    padding: 7px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    cursor: pointer;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);    
+}

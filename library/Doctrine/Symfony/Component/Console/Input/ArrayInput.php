@@ -1,15 +1,15 @@
 <?php
 
-namespace Symfony\Component\Console\Input;
-
 /*
- * This file is part of the symfony framework.
+ * This file is part of the Symfony package.
  *
  * (c) Fabien Potencier <fabien.potencier@symfony-project.com>
  *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
+namespace Symfony\Component\Console\Input;
 
 /**
  * ArrayInput represents an input provided as an array.
@@ -18,157 +18,173 @@ namespace Symfony\Component\Console\Input;
  *
  *     $input = new ArrayInput(array('name' => 'foo', '--bar' => 'foobar'));
  *
- * @package    symfony
- * @subpackage console
- * @author     Fabien Potencier <fabien.potencier@symfony-project.com>
+ * @author Fabien Potencier <fabien.potencier@symfony-project.com>
  */
 class ArrayInput extends Input
 {
-  protected $parameters;
+    protected $parameters;
 
-  /**
-   * Constructor.
-   *
-   * @param array      $param An array of parameters
-   * @param InputDefinition $definition A InputDefinition instance
-   */
-  public function __construct(array $parameters, InputDefinition $definition = null)
-  {
-    $this->parameters = $parameters;
-
-    parent::__construct($definition);
-  }
-
-  /**
-   * Returns the first argument from the raw parameters (not parsed).
-   *
-   * @return string The value of the first argument or null otherwise
-   */
-  public function getFirstArgument()
-  {
-    foreach ($this->parameters as $key => $value)
+    /**
+     * Constructor.
+     *
+     * @param array           $param An array of parameters
+     * @param InputDefinition $definition A InputDefinition instance
+     */
+    public function __construct(array $parameters, InputDefinition $definition = null)
     {
-      if ($key && '-' === $key[0])
-      {
-        continue;
-      }
+        $this->parameters = $parameters;
 
-      return $value;
-    }
-  }
-
-  /**
-   * Returns true if the raw parameters (not parsed) contains a value.
-   *
-   * This method is to be used to introspect the input parameters
-   * before it has been validated. It must be used carefully.
-   *
-   * @param string|array $value The values to look for in the raw parameters (can be an array)
-   *
-   * @return Boolean true if the value is contained in the raw parameters
-   */
-  public function hasParameterOption($values)
-  {
-    if (!is_array($values))
-    {
-      $values = array($values);
+        parent::__construct($definition);
     }
 
-    foreach ($this->parameters as $k => $v)
+    /**
+     * Returns the first argument from the raw parameters (not parsed).
+     *
+     * @return string The value of the first argument or null otherwise
+     */
+    public function getFirstArgument()
     {
-      if (!is_int($k))
-      {
-        $v = $k;
-      }
+        foreach ($this->parameters as $key => $value) {
+            if ($key && '-' === $key[0]) {
+                continue;
+            }
 
-      if (in_array($v, $values))
-      {
-        return true;
-      }
+            return $value;
+        }
     }
 
-    return false;
-  }
-
-  /**
-   * Processes command line arguments.
-   */
-  protected function parse()
-  {
-    foreach ($this->parameters as $key => $value)
+    /**
+     * Returns true if the raw parameters (not parsed) contains a value.
+     *
+     * This method is to be used to introspect the input parameters
+     * before it has been validated. It must be used carefully.
+     *
+     * @param string|array $value The values to look for in the raw parameters (can be an array)
+     *
+     * @return Boolean true if the value is contained in the raw parameters
+     */
+    public function hasParameterOption($values)
     {
-      if ('--' === substr($key, 0, 2))
-      {
-        $this->addLongOption(substr($key, 2), $value);
-      }
-      elseif ('-' === $key[0])
-      {
-        $this->addShortOption(substr($key, 1), $value);
-      }
-      else
-      {
-        $this->addArgument($key, $value);
-      }
-    }
-  }
+        if (!is_array($values)) {
+            $values = array($values);
+        }
 
-  /**
-   * Adds a short option value.
-   *
-   * @param string $shortcut The short option key
-   * @param mixed  $value    The value for the option
-   */
-  protected function addShortOption($shortcut, $value)
-  {
-    if (!$this->definition->hasShortcut($shortcut))
-    {
-      throw new \RuntimeException(sprintf('The "-%s" option does not exist.', $shortcut));
+        foreach ($this->parameters as $k => $v) {
+            if (!is_int($k)) {
+                $v = $k;
+            }
+
+            if (in_array($v, $values)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    $this->addLongOption($this->definition->getOptionForShortcut($shortcut)->getName(), $value);
-  }
-
-  /**
-   * Adds a long option value.
-   *
-   * @param string $name  The long option key
-   * @param mixed  $value The value for the option
-   */
-  protected function addLongOption($name, $value)
-  {
-    if (!$this->definition->hasOption($name))
+    /**
+     * Returns the value of a raw option (not parsed).
+     *
+     * This method is to be used to introspect the input parameters
+     * before it has been validated. It must be used carefully.
+     *
+     * @param string|array $values The value(s) to look for in the raw parameters (can be an array)
+     * @param mixed $default The default value to return if no result is found
+     *
+     * @return mixed The option value
+     */
+    public function getParameterOption($values, $default = false)
     {
-      throw new \RuntimeException(sprintf('The "--%s" option does not exist.', $name));
+        if (!is_array($values)) {
+            $values = array($values);
+        }
+
+        foreach ($this->parameters as $k => $v) {
+            if (is_int($k) && in_array($v, $values)) {
+                return true;
+            } elseif (in_array($k, $values)) {
+                return $v;
+            }
+        }
+
+        return $default;
     }
 
-    $option = $this->definition->getOption($name);
-
-    if (null === $value)
+    /**
+     * Processes command line arguments.
+     */
+    protected function parse()
     {
-      if ($option->isParameterRequired())
-      {
-        throw new \RuntimeException(sprintf('The "--%s" option requires a value.', $name));
-      }
-
-      $value = $option->isParameterOptional() ? $option->getDefault() : true;
+        foreach ($this->parameters as $key => $value) {
+            if ('--' === substr($key, 0, 2)) {
+                $this->addLongOption(substr($key, 2), $value);
+            } elseif ('-' === $key[0]) {
+                $this->addShortOption(substr($key, 1), $value);
+            } else {
+                $this->addArgument($key, $value);
+            }
+        }
     }
 
-    $this->options[$name] = $value;
-  }
-
-  /**
-   * Adds an argument value.
-   *
-   * @param string $name  The argument name
-   * @param mixed  $value The value for the argument
-   */
-  protected function addArgument($name, $value)
-  {
-    if (!$this->definition->hasArgument($name))
+    /**
+     * Adds a short option value.
+     *
+     * @param string $shortcut The short option key
+     * @param mixed  $value    The value for the option
+     *
+     * @throws \RuntimeException When option given doesn't exist
+     */
+    protected function addShortOption($shortcut, $value)
     {
-      throw new \RuntimeException(sprintf('The "%s" argument does not exist.', $name));
+        if (!$this->definition->hasShortcut($shortcut)) {
+            throw new \InvalidArgumentException(sprintf('The "-%s" option does not exist.', $shortcut));
+        }
+
+        $this->addLongOption($this->definition->getOptionForShortcut($shortcut)->getName(), $value);
     }
 
-    $this->arguments[$name] = $value;
-  }
+    /**
+     * Adds a long option value.
+     *
+     * @param string $name  The long option key
+     * @param mixed  $value The value for the option
+     *
+     * @throws \InvalidArgumentException When option given doesn't exist
+     * @throws \InvalidArgumentException When a required value is missing
+     */
+    protected function addLongOption($name, $value)
+    {
+        if (!$this->definition->hasOption($name)) {
+            throw new \InvalidArgumentException(sprintf('The "--%s" option does not exist.', $name));
+        }
+
+        $option = $this->definition->getOption($name);
+
+        if (null === $value) {
+            if ($option->isValueRequired()) {
+                throw new \InvalidArgumentException(sprintf('The "--%s" option requires a value.', $name));
+            }
+
+            $value = $option->isValueOptional() ? $option->getDefault() : true;
+        }
+
+        $this->options[$name] = $value;
+    }
+
+    /**
+     * Adds an argument value.
+     *
+     * @param string $name  The argument name
+     * @param mixed  $value The value for the argument
+     *
+     * @throws \InvalidArgumentException When argument given doesn't exist
+     */
+    protected function addArgument($name, $value)
+    {
+        if (!$this->definition->hasArgument($name)) {
+            throw new \InvalidArgumentException(sprintf('The "%s" argument does not exist.', $name));
+        }
+
+        $this->arguments[$name] = $value;
+    }
 }

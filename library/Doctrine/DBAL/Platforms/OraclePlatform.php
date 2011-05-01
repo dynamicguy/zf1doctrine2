@@ -113,7 +113,7 @@ class OraclePlatform extends AbstractPlatform
      */
     public function getCreateSequenceSQL(\Doctrine\DBAL\Schema\Sequence $sequence)
     {
-        return 'CREATE SEQUENCE ' . $sequence->getName() .
+        return 'CREATE SEQUENCE ' . $sequence->getQuotedName($this) .
                ' START WITH ' . $sequence->getInitialValue() .
                ' MINVALUE ' . $sequence->getInitialValue() . 
                ' INCREMENT BY ' . $sequence->getAllocationSize();
@@ -234,19 +234,8 @@ class OraclePlatform extends AbstractPlatform
      * @params array $field
      * @override
      */
-    public function getVarcharTypeDeclarationSQL(array $field)
+    protected function getVarcharTypeDeclarationSQLSnippet($length, $fixed)
     {
-        if ( ! isset($field['length'])) {
-            if (array_key_exists('default', $field)) {
-                $field['length'] = $this->getVarcharMaxLength();
-            } else {
-                $field['length'] = false;
-            }
-        }
-
-        $length = ($field['length'] <= $this->getVarcharMaxLength()) ? $field['length'] : false;
-        $fixed = (isset($field['fixed'])) ? $field['fixed'] : false;
-
         return $fixed ? ($length ? 'CHAR(' . $length . ')' : 'CHAR(2000)')
                 : ($length ? 'VARCHAR2(' . $length . ')' : 'VARCHAR2(4000)');
     }
@@ -307,7 +296,7 @@ class OraclePlatform extends AbstractPlatform
      * @param  string $table
      * @return string
      */
-    public function getListTableIndexesSQL($table)
+    public function getListTableIndexesSQL($table, $currentDatabase = null)
     {
         $table = strtoupper($table);
         
@@ -455,7 +444,7 @@ LEFT JOIN all_cons_columns r_cols
     public function getDropSequenceSQL($sequence)
     {
         if ($sequence instanceof \Doctrine\DBAL\Schema\Sequence) {
-            $sequence = $sequence->getName();
+            $sequence = $sequence->getQuotedName($this);
         }
 
         return 'DROP SEQUENCE ' . $sequence;
@@ -469,11 +458,11 @@ LEFT JOIN all_cons_columns r_cols
     public function getDropForeignKeySQL($foreignKey, $table)
     {
         if ($foreignKey instanceof \Doctrine\DBAL\Schema\ForeignKeyConstraint) {
-            $foreignKey = $foreignKey->getName();
+            $foreignKey = $foreignKey->getQuotedName($this);
         }
 
         if ($table instanceof \Doctrine\DBAL\Schema\Table) {
-            $table = $table->getName();
+            $table = $table->getQuotedName($this);
         }
 
         return 'ALTER TABLE ' . $table . ' DROP CONSTRAINT ' . $foreignKey;
@@ -502,7 +491,7 @@ LEFT JOIN all_cons_columns r_cols
 
         $fields = array();
         foreach ($diff->addedColumns AS $column) {
-            $fields[] = $this->getColumnDeclarationSQL($column->getName(), $column->toArray());
+            $fields[] = $this->getColumnDeclarationSQL($column->getQuotedName($this), $column->toArray());
         }
         if (count($fields)) {
             $sql[] = 'ALTER TABLE ' . $diff->name . ' ADD (' . implode(', ', $fields) . ')';
@@ -511,19 +500,19 @@ LEFT JOIN all_cons_columns r_cols
         $fields = array();
         foreach ($diff->changedColumns AS $columnDiff) {
             $column = $columnDiff->column;
-            $fields[] = $column->getName(). ' ' . $this->getColumnDeclarationSQL('', $column->toArray());
+            $fields[] = $column->getQuotedName($this). ' ' . $this->getColumnDeclarationSQL('', $column->toArray());
         }
         if (count($fields)) {
             $sql[] = 'ALTER TABLE ' . $diff->name . ' MODIFY (' . implode(', ', $fields) . ')';
         }
 
         foreach ($diff->renamedColumns AS $oldColumnName => $column) {
-            $sql[] = 'ALTER TABLE ' . $diff->name . ' RENAME COLUMN ' . $oldColumnName .' TO ' . $column->getName();
+            $sql[] = 'ALTER TABLE ' . $diff->name . ' RENAME COLUMN ' . $oldColumnName .' TO ' . $column->getQuotedName($this);
         }
 
         $fields = array();
         foreach ($diff->removedColumns AS $column) {
-            $fields[] = $column->getName();
+            $fields[] = $column->getQuotedName($this);
         }
         if (count($fields)) {
             $sql[] = 'ALTER TABLE ' . $diff->name . ' DROP COLUMN ' . implode(', ', $fields);
@@ -566,7 +555,7 @@ LEFT JOIN all_cons_columns r_cols
      * @param integer $offset       start reading from given offset
      * @return string               the modified query
      */
-    public function modifyLimitQuery($query, $limit, $offset = null)
+    protected function doModifyLimitQuery($query, $limit, $offset = null)
     {
         $limit = (int) $limit;
         $offset = (int) $offset;
@@ -660,6 +649,16 @@ LEFT JOIN all_cons_columns r_cols
     }
 
     /**
+     * Whether the platform supports releasing savepoints.
+     *
+     * @return boolean
+     */
+    public function supportsReleaseSavepoints()
+    {
+        return false;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getTruncateTableSQL($tableName, $cascade = false)
@@ -692,12 +691,23 @@ LEFT JOIN all_cons_columns r_cols
             'date'              => 'datetime',
             'timestamp'         => 'datetime',
             'timestamptz'       => 'datetimetz',
-            'float'             => 'decimal',
+            'float'             => 'float',
             'long'              => 'string',
             'clob'              => 'text',
             'nclob'             => 'text',
             'rowid'             => 'string',
             'urowid'            => 'string'
         );
+    }
+
+    /**
+     * Generate SQL to release a savepoint
+     *
+     * @param string $savepoint
+     * @return string
+     */
+    public function releaseSavePoint($savepoint)
+    {
+        return '';
     }
 }

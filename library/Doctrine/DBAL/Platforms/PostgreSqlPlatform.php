@@ -154,30 +154,17 @@ class PostgreSqlPlatform extends AbstractPlatform
     public function getListSequencesSQL($database)
     {
         return "SELECT
-                    relname
+                    c.relname, n.nspname AS schemaname
                 FROM
-                   pg_class
-                WHERE relkind = 'S' AND relnamespace IN
-                    (SELECT oid FROM pg_namespace
-                        WHERE nspname NOT LIKE 'pg_%' AND nspname != 'information_schema')";
+                   pg_class c, pg_namespace n
+                WHERE relkind = 'S' AND n.oid = c.relnamespace AND 
+                    (n.nspname NOT LIKE 'pg_%' AND n.nspname != 'information_schema')";
     }
 
     public function getListTablesSQL()
     {
-        return "SELECT
-                    c.relname AS table_name
-                FROM pg_class c, pg_user u
-                WHERE c.relowner = u.usesysid
-                    AND c.relkind = 'r'
-                    AND NOT EXISTS (SELECT 1 FROM pg_views WHERE viewname = c.relname)
-                    AND c.relname !~ '^(pg_|sql_)'
-                UNION
-                SELECT c.relname AS table_name
-                FROM pg_class c
-                WHERE c.relkind = 'r'
-                    AND NOT EXISTS (SELECT 1 FROM pg_views WHERE viewname = c.relname)
-                    AND NOT EXISTS (SELECT 1 FROM pg_user WHERE usesysid = c.relowner)
-                    AND c.relname !~ '^pg_'";
+        return "SELECT tablename AS table_name, schemaname AS schema_name
+                FROM pg_tables WHERE schemaname NOT LIKE 'pg_%' AND schemaname != 'information_schema'";
     }
 
     public function getListViewsSQL($database)
@@ -192,9 +179,9 @@ class PostgreSqlPlatform extends AbstractPlatform
                   WHERE r.conrelid =
                   (
                       SELECT c.oid
-                      FROM pg_catalog.pg_class c
-                      LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-                      WHERE c.relname = '" . $table . "' AND pg_catalog.pg_table_is_visible(c.oid)
+                      FROM pg_catalog.pg_class c, pg_catalog.pg_namespace n
+                      WHERE " .$this->getTableWhereClause($table) ."
+                        AND n.oid = c.relnamespace
                   )
                   AND r.contype = 'f'";
     }
@@ -230,16 +217,28 @@ class PostgreSqlPlatform extends AbstractPlatform
      * @param  string $table
      * @return string
      */
-    public function getListTableIndexesSQL($table)
+    public function getListTableIndexesSQL($table, $currentDatabase = null)
     {
         return "SELECT relname, pg_index.indisunique, pg_index.indisprimary,
                        pg_index.indkey, pg_index.indrelid
                  FROM pg_class, pg_index
                  WHERE oid IN (
                     SELECT indexrelid
-                    FROM pg_index, pg_class
-                    WHERE pg_class.relname='$table' AND pg_class.oid=pg_index.indrelid
+                    FROM pg_index si, pg_class sc, pg_namespace sn
+                    WHERE " . $this->getTableWhereClause($table, 'sc', 'sn')." AND sc.oid=si.indrelid AND sc.relnamespace = sn.oid
                  ) AND pg_index.indexrelid = oid";
+    }
+
+    private function getTableWhereClause($table, $classAlias = 'c', $namespaceAlias = 'n')
+    {
+        $whereClause = "";
+        if (strpos($table, ".") !== false) {
+            list($schema, $table) = explode(".", $table);
+            $whereClause = "$classAlias.relname = '" . $table . "' AND $namespaceAlias.nspname = '" . $schema . "'";
+        } else {
+            $whereClause = "$classAlias.relname = '" . $table . "'";
+        }
+        return $whereClause;
     }
 
     public function getListTableColumnsSQL($table)
@@ -264,11 +263,12 @@ class PostgreSqlPlatform extends AbstractPlatform
                      WHERE c.oid = pg_attrdef.adrelid
                         AND pg_attrdef.adnum=a.attnum
                     ) AS default
-                    FROM pg_attribute a, pg_class c, pg_type t
-                    WHERE c.relname = '$table'
+                    FROM pg_attribute a, pg_class c, pg_type t, pg_namespace n 
+                    WHERE ".$this->getTableWhereClause($table, 'c', 'n') ."
                         AND a.attnum > 0
                         AND a.attrelid = c.oid
                         AND a.atttypid = t.oid
+                        AND n.oid = c.relnamespace
                     ORDER BY a.attnum";
     }
     
@@ -342,12 +342,12 @@ class PostgreSqlPlatform extends AbstractPlatform
         $sql = array();
 
         foreach ($diff->addedColumns as $column) {
-            $query = 'ADD ' . $this->getColumnDeclarationSQL($column->getName(), $column->toArray());
+            $query = 'ADD ' . $this->getColumnDeclarationSQL($column->getQuotedName($this), $column->toArray());
             $sql[] = 'ALTER TABLE ' . $diff->name . ' ' . $query;
         }
 
         foreach ($diff->removedColumns as $column) {
-            $query = 'DROP ' . $column->getName();
+            $query = 'DROP ' . $column->getQuotedName($this);
             $sql[] = 'ALTER TABLE ' . $diff->name . ' ' . $query;
         }
 
@@ -388,7 +388,7 @@ class PostgreSqlPlatform extends AbstractPlatform
         }
 
         foreach ($diff->renamedColumns as $oldColumnName => $column) {
-            $sql[] = 'ALTER TABLE ' . $diff->name . ' RENAME COLUMN ' . $oldColumnName . ' TO ' . $column->getName();
+            $sql[] = 'ALTER TABLE ' . $diff->name . ' RENAME COLUMN ' . $oldColumnName . ' TO ' . $column->getQuotedName($this);
         }
 
         if ($diff->newName !== false) {
@@ -408,7 +408,7 @@ class PostgreSqlPlatform extends AbstractPlatform
      */
     public function getCreateSequenceSQL(\Doctrine\DBAL\Schema\Sequence $sequence)
     {
-        return 'CREATE SEQUENCE ' . $sequence->getName() .
+        return 'CREATE SEQUENCE ' . $sequence->getQuotedName($this) .
                ' INCREMENT BY ' . $sequence->getAllocationSize() .
                ' MINVALUE ' . $sequence->getInitialValue() .
                ' START ' . $sequence->getInitialValue();
@@ -422,7 +422,7 @@ class PostgreSqlPlatform extends AbstractPlatform
     public function getDropSequenceSQL($sequence)
     {
         if ($sequence instanceof \Doctrine\DBAL\Schema\Sequence) {
-            $sequence = $sequence->getName();
+            $sequence = $sequence->getQuotedName($this);
         }
         return 'DROP SEQUENCE ' . $sequence;
     }
@@ -591,21 +591,10 @@ class PostgreSqlPlatform extends AbstractPlatform
      * @params array $field
      * @override
      */
-    public function getVarcharTypeDeclarationSQL(array $field)
+    protected function getVarcharTypeDeclarationSQLSnippet($length, $fixed)
     {
-        if ( ! isset($field['length'])) {
-            if (array_key_exists('default', $field)) {
-                $field['length'] = $this->getVarcharMaxLength();
-            } else {
-                $field['length'] = false;
-            }
-        }
-
-        $length = ($field['length'] <= $this->getVarcharMaxLength()) ? $field['length'] : false;
-        $fixed = (isset($field['fixed'])) ? $field['fixed'] : false;
-
         return $fixed ? ($length ? 'CHAR(' . $length . ')' : 'CHAR(255)')
-                : ($length ? 'VARCHAR(' . $length . ')' : 'TEXT');
+                : ($length ? 'VARCHAR(' . $length . ')' : 'VARCHAR(255)');
     }
     
     /** @override */
@@ -670,41 +659,46 @@ class PostgreSqlPlatform extends AbstractPlatform
     protected function initializeDoctrineTypeMappings()
     {
         $this->doctrineTypeMapping = array(
-            'smallint' => 'smallint',
-            'int2' => 'smallint',
-            'serial' => 'integer',
-            'serial4' => 'integer',
-            'int' => 'integer',
-            'int4' => 'integer',
-            'integer' => 'integer',
-            'bigserial' => 'bigint',
-            'serial8' => 'bigint',
-            'bigint' => 'bigint',
-            'int8' => 'bigint',
-            'bool' => 'boolean',
-            'boolean' => 'boolean',
-            'text' => 'text',
-            'varchar' => 'string',
-            'interval' => 'string',
-            '_varchar' => 'string',
-            'char' => 'string',
-            'bpchar' => 'string',
-            'date' => 'date',
-            'datetime' => 'datetime',
-            'timestamp' => 'datetime',
-            'timestamptz' => 'datetimetz',
-            'time' => 'time',
-            'timetz' => 'time',
-            'float' => 'decimal',
-            'float4' => 'decimal',
-            'float8' => 'decimal',
-            'double' => 'decimal',
-            'double precision' => 'decimal',
-            'real' => 'decimal',
-            'decimal' => 'decimal',
-            'money' => 'decimal',
-            'numeric' => 'decimal',
-            'year' => 'date',
+            'smallint'      => 'smallint',
+            'int2'          => 'smallint',
+            'serial'        => 'integer',
+            'serial4'       => 'integer',
+            'int'           => 'integer',
+            'int4'          => 'integer',
+            'integer'       => 'integer',
+            'bigserial'     => 'bigint',
+            'serial8'       => 'bigint',
+            'bigint'        => 'bigint',
+            'int8'          => 'bigint',
+            'bool'          => 'boolean',
+            'boolean'       => 'boolean',
+            'text'          => 'text',
+            'varchar'       => 'string',
+            'interval'      => 'string',
+            '_varchar'      => 'string',
+            'char'          => 'string',
+            'bpchar'        => 'string',
+            'date'          => 'date',
+            'datetime'      => 'datetime',
+            'timestamp'     => 'datetime',
+            'timestamptz'   => 'datetimetz',
+            'time'          => 'time',
+            'timetz'        => 'time',
+            'float'         => 'float',
+            'float4'        => 'float',
+            'float8'        => 'float',
+            'double'        => 'float',
+            'double precision' => 'float',
+            'real'          => 'float',
+            'decimal'       => 'decimal',
+            'money'         => 'decimal',
+            'numeric'       => 'decimal',
+            'year'          => 'date',
         );
+    }
+
+    public function getVarcharMaxLength()
+    {
+        return 65535;
     }
 }

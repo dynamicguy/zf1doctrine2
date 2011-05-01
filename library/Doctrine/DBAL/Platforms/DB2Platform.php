@@ -37,8 +37,8 @@ class DB2Platform extends AbstractPlatform
             'character'     => 'string',
             'clob'          => 'text',
             'decimal'       => 'decimal',
-            'double'        => 'decimal',
-            'real'          => 'decimal',
+            'double'        => 'float',
+            'real'          => 'float',
             'timestamp'     => 'datetime',
         );
     }
@@ -48,19 +48,8 @@ class DB2Platform extends AbstractPlatform
      *
      * @param array $field
      */
-    public function getVarcharTypeDeclarationSQL(array $field)
+    protected function getVarcharTypeDeclarationSQLSnippet($length, $fixed)
     {
-        if ( ! isset($field['length'])) {
-            if (array_key_exists('default', $field)) {
-                $field['length'] = $this->getVarcharMaxLength();
-            } else {
-                $field['length'] = false;
-            }
-        }
-
-        $length = ($field['length'] <= $this->getVarcharMaxLength()) ? $field['length'] : false;
-        $fixed = (isset($field['fixed'])) ? $field['fixed'] : false;
-
         return $fixed ? ($length ? 'CHAR(' . $length . ')' : 'CHAR(255)')
                 : ($length ? 'VARCHAR(' . $length . ')' : 'VARCHAR(255)');
     }
@@ -245,7 +234,7 @@ class DB2Platform extends AbstractPlatform
         return "SELECT NAME, TEXT FROM SYSIBM.SYSVIEWS";
     }
 
-    public function getListTableIndexesSQL($table)
+    public function getListTableIndexesSQL($table, $currentDatabase = null)
     {
         return "SELECT NAME, COLNAMES, UNIQUERULE FROM SYSIBM.SYSINDEXES WHERE TBNAME = UPPER('" . $table . "')";
     }
@@ -287,6 +276,16 @@ class DB2Platform extends AbstractPlatform
     }
 
     public function supportsCreateDropDatabase()
+    {
+        return false;
+    }
+
+    /**
+     * Whether the platform supports releasing savepoints.
+     *
+     * @return boolean
+     */
+    public function supportsReleaseSavepoints()
     {
         return false;
     }
@@ -369,22 +368,22 @@ class DB2Platform extends AbstractPlatform
 
         $queryParts = array();
         foreach ($diff->addedColumns AS $fieldName => $column) {
-            $queryParts[] = 'ADD COLUMN ' . $this->getColumnDeclarationSQL($column->getName(), $column->toArray());
+            $queryParts[] = 'ADD COLUMN ' . $this->getColumnDeclarationSQL($column->getQuotedName($this), $column->toArray());
         }
 
         foreach ($diff->removedColumns AS $column) {
-            $queryParts[] =  'DROP COLUMN ' . $column->getName();
+            $queryParts[] =  'DROP COLUMN ' . $column->getQuotedName($this);
         }
 
         foreach ($diff->changedColumns AS $columnDiff) {
             /* @var $columnDiff Doctrine\DBAL\Schema\ColumnDiff */
             $column = $columnDiff->column;
             $queryParts[] =  'ALTER ' . ($columnDiff->oldColumnName) . ' '
-                    . $this->getColumnDeclarationSQL($column->getName(), $column->toArray());
+                    . $this->getColumnDeclarationSQL($column->getQuotedName($this), $column->toArray());
         }
 
         foreach ($diff->renamedColumns AS $oldColumnName => $column) {
-            $queryParts[] =  'RENAME ' . $oldColumnName . ' TO ' . $column->getName();
+            $queryParts[] =  'RENAME ' . $oldColumnName . ' TO ' . $column->getQuotedName($this);
         }
 
         if (count($queryParts) > 0) {
@@ -454,7 +453,7 @@ class DB2Platform extends AbstractPlatform
         return "SESSION." . $tableName;
     }
 
-    public function modifyLimitQuery($query, $limit, $offset = null)
+    protected function doModifyLimitQuery($query, $limit, $offset = null)
     {
         if ($limit === null && $offset === null) {
             return $query;
@@ -538,5 +537,17 @@ class DB2Platform extends AbstractPlatform
     public function getDummySelectSQL()
     {
         return 'SELECT 1 FROM sysibm.sysdummy1';
+    }
+
+    /**
+     * DB2 supports savepoints, but they work semantically different than on other vendor platforms.
+     *
+     * TODO: We have to investigate how to get DB2 up and running with savepoints.
+     *
+     * @return bool
+     */
+    public function supportsSavepoints()
+    {
+        return false;
     }
 }

@@ -126,6 +126,11 @@ class Parser
     private $_customOutputWalker;
 
     /**
+     * @var array
+     */
+    private $_identVariableExpressions = array();
+
+    /**
      * Creates a new query parser object.
      *
      * @param Query $query The Query to parse.
@@ -272,6 +277,9 @@ class Parser
     {
         $AST = $this->getAST();
 
+        $this->fixIdentificationVariableOrder($AST);
+        $this->assertSelectEntityRootAliasRequirement();
+
         if (($customWalkers = $this->_query->getHint(Query::HINT_CUSTOM_TREE_WALKERS)) !== false) {
             $this->_customTreeWalkers = $customWalkers;
         }
@@ -311,6 +319,46 @@ class Parser
         $this->_parserResult->setSqlExecutor($outputWalker->getExecutor($AST));
 
         return $this->_parserResult;
+    }
+    
+    private function assertSelectEntityRootAliasRequirement()
+    {
+        if ( count($this->_identVariableExpressions) > 0) {
+            $foundRootEntity = false;
+            foreach ($this->_identVariableExpressions AS $dqlAlias => $expr) {
+                if (isset($this->_queryComponents[$dqlAlias]) && $this->_queryComponents[$dqlAlias]['parent'] === null) {
+                    $foundRootEntity = true;
+                }
+            }
+            
+            if (!$foundRootEntity) {
+                $this->semanticalError('Cannot select entity through identification variables without choosing at least one root entity alias.');
+            }
+        }
+    }
+    
+    /**
+     * Fix order of identification variables.
+     * 
+     * They have to appear in the select clause in the same order as the
+     * declarations (from ... x join ... y join ... z ...) appear in the query
+     * as the hydration process relies on that order for proper operation.
+     * 
+     * @param AST\SelectStatement|AST\DeleteStatement|AST\UpdateStatement $AST
+     * @return void
+     */
+    private function fixIdentificationVariableOrder($AST)
+    {
+        if ( count($this->_identVariableExpressions) > 1) {
+            foreach ($this->_queryComponents as $dqlAlias => $qComp) {
+                if (isset($this->_identVariableExpressions[$dqlAlias])) {
+                    $expr = $this->_identVariableExpressions[$dqlAlias];
+                    $key = array_search($expr, $AST->selectClause->selectExpressions);
+                    unset($AST->selectClause->selectExpressions[$key]);
+                    $AST->selectClause->selectExpressions[] = $expr;
+                }
+            }
+        }
     }
 
     /**
@@ -1276,6 +1324,10 @@ class Parser
             $token = $this->_lexer->lookahead;
             $identVariable = $this->IdentificationVariable();
 
+            if (!isset($this->_queryComponents[$identVariable])) {
+                $this->semanticalError('Cannot group by undefined identification variable.');
+            }
+
             return $identVariable;
         }
 
@@ -1585,7 +1637,7 @@ class Parser
             return $this->StateFieldPathExpression();
         } else if ($lookahead == Lexer::T_INTEGER || $lookahead == Lexer::T_FLOAT) {
             return $this->SimpleArithmeticExpression();
-        } else if ($this->_isFunction()) {
+        } else if ($this->_isFunction() || $this->_isAggregateFunction($this->_lexer->lookahead['type'])) {
             // We may be in an ArithmeticExpression (find the matching ")" and inspect for Math operator)
             $this->_lexer->peek(); // "("
             $peek = $this->_peekBeyondClosingParenthesis();
@@ -1593,8 +1645,12 @@ class Parser
             if ($this->_isMathOperator($peek)) {
                 return $this->SimpleArithmeticExpression();
             }
-            
-            return $this->FunctionDeclaration();
+
+            if ($this->_isAggregateFunction($this->_lexer->lookahead['type'])) {
+                return $this->AggregateExpression();
+            } else {
+                return $this->FunctionDeclaration();
+            }
         } else if ($lookahead == Lexer::T_STRING) {
             return $this->StringPrimary();
         } else if ($lookahead == Lexer::T_INPUT_PARAMETER) {
@@ -1628,6 +1684,7 @@ class Parser
     public function SelectExpression()
     {
         $expression = null;
+        $identVariable = null;
         $fieldAliasIdentificationVariable = null;
         $peek = $this->_lexer->glimpse();
 
@@ -1639,7 +1696,7 @@ class Parser
                 $expression = $this->ScalarExpression();
             } else {
                 $supportsAlias = false;
-                $expression = $this->IdentificationVariable();
+                $expression = $identVariable = $this->IdentificationVariable();
             }
         } else if ($this->_lexer->lookahead['value'] == '(') {
             if ($peek['type'] == Lexer::T_SELECT) {
@@ -1666,8 +1723,10 @@ class Parser
         } else if ($this->_lexer->lookahead['type'] == Lexer::T_PARTIAL) {
             $supportsAlias = false;
             $expression = $this->PartialObjectExpression();
+            $identVariable = $expression->identificationVariable;
         } else if ($this->_lexer->lookahead['type'] == Lexer::T_INTEGER ||
-                $this->_lexer->lookahead['type'] == Lexer::T_FLOAT) {
+                $this->_lexer->lookahead['type'] == Lexer::T_FLOAT ||
+                $this->_lexer->lookahead['type'] == Lexer::T_STRING) {
             // Shortcut: ScalarExpression => SimpleArithmeticExpression
             $expression = $this->SimpleArithmeticExpression();
         } else {
@@ -1694,7 +1753,11 @@ class Parser
             }
         }
 
-        return new AST\SelectExpression($expression, $fieldAliasIdentificationVariable);
+        $expr = new AST\SelectExpression($expression, $fieldAliasIdentificationVariable);
+        if (!$supportsAlias) {
+            $this->_identVariableExpressions[$identVariable] = $expr;
+        }
+        return $expr;
     }
 
     /**
@@ -1732,15 +1795,8 @@ class Parser
         }
 
         $this->_lexer->peek();
-        $beyond = $this->_peekBeyondClosingParenthesis();
 
-        if ($this->_isMathOperator($beyond)) {
-            $expression = $this->ScalarExpression();
-        } else if ($this->_isAggregateFunction($this->_lexer->lookahead['type'])) {
-            $expression = $this->AggregateExpression();
-        } else {
-            $expression = $this->FunctionDeclaration();
-        }
+        $expression = $this->ScalarExpression();
 
         $expr = new AST\SimpleSelectExpression($expression);
 
@@ -2332,7 +2388,7 @@ class Parser
 
             $functionName = $this->_lexer->token['value'];
             $this->match(Lexer::T_OPEN_PARENTHESIS);
-            $pathExp = $this->StateFieldPathExpression();
+            $pathExp = $this->SimpleArithmeticExpression();
             $this->match(Lexer::T_CLOSE_PARENTHESIS);
         }
 

@@ -179,6 +179,8 @@ class AnnotationDriver implements Driver
                         'type' => $discrColumnAnnot->type,
                         'length' => $discrColumnAnnot->length
                     ));
+                } else {
+                    $metadata->setDiscriminatorColumn(array('name' => 'dtype', 'type' => 'string', 'length' => 255));
                 }
 
                 // Evaluate DiscriminatorMap annotation
@@ -365,7 +367,8 @@ class AnnotationDriver implements Driver
         // Evaluate @HasLifecycleCallbacks annotation
         if (isset($classAnnotations['Doctrine\ORM\Mapping\HasLifecycleCallbacks'])) {
             foreach ($class->getMethods() as $method) {
-                if ($method->isPublic()) {
+                // filter for the declaring class only, callbacks from parents will already be registered.
+                if ($method->isPublic() && $method->getDeclaringClass()->getName() == $class->name) {
                     $annotations = $this->_reader->getMethodAnnotations($method);
 
                     if (isset($annotations['Doctrine\ORM\Mapping\PrePersist'])) {
@@ -435,7 +438,7 @@ class AnnotationDriver implements Driver
 
         foreach ($this->_paths as $path) {
             if ( ! is_dir($path)) {
-                throw MappingException::fileMappingDriversRequireConfiguredDirectoryPath();
+                throw MappingException::fileMappingDriversRequireConfiguredDirectoryPath($path);
             }
 
             $iterator = new \RecursiveIteratorIterator(

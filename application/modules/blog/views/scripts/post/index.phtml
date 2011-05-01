@@ -7,10 +7,11 @@
     </tr>
 <?php if($this->posts): ?>
 
-<?php foreach($this->posts as $post): ?>
+<?php foreach($this->posts as $key=>$post): ?>
+<?php if($key>1)die;?>    
 <tr>
     <td>
-        <a href="/blog/post/view/id/<?php echo $post->getId(); ?>/<?php echo $post->getSlug(); ?>"><?php echo $post->getTitle(); ?></a>
+        <?php echo key; ?>||<a href="/blog/post/view/id/<?php echo $post->getId(); ?>/<?php echo $post->getSlug(); ?>"><?php echo $post->getTitle(); ?></a>
     </td>
     <td><?php echo substr($post->getContent(), -100); ?>...</td>
     <td>

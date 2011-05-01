@@ -20,3 +20,962 @@
 [Fri Apr 29 17:37:00 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'ZendX_Doctrine2_Exception' with message 'No Doctrine2 'proxyDir' option was given, but is required.' in /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php:185\nStack trace:\n#0 /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php(100): ZendX_Doctrine2_EntityManagerFactory->_createEntityManager()\n#1 /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php(44): ZendX_Doctrine2_EntityManagerFactory->createEntityManager()\n#2 /Users/ferdous/Projects/php/zf1doctrine2/library/Zend/Application/Bootstrap/BootstrapAbstract.php(681): ZendX_Doctrine2_Application_Resource_Entitymanagerfactory->init()\n#3 /Users/ferdous/Projects/php/zf1doctrine2/library/Zend/Application/Bootstrap/BootstrapAbstract.php(624): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('entitymanagerfa...')\n#4 /Users/ferdous/Projects/php/zf1doctrine2/lib in /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php on line 185
 [Fri Apr 29 17:44:29 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'ZendX_Doctrine2_Exception' with message 'No Doctrine2 'proxyDir' option was given, but is required.' in /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php:185\nStack trace:\n#0 /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php(100): ZendX_Doctrine2_EntityManagerFactory->_createEntityManager()\n#1 /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php(44): ZendX_Doctrine2_EntityManagerFactory->createEntityManager()\n#2 /Users/ferdous/Projects/php/zf1doctrine2/library/Zend/Application/Bootstrap/BootstrapAbstract.php(681): ZendX_Doctrine2_Application_Resource_Entitymanagerfactory->init()\n#3 /Users/ferdous/Projects/php/zf1doctrine2/library/Zend/Application/Bootstrap/BootstrapAbstract.php(624): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('entitymanagerfa...')\n#4 /Users/ferdous/Projects/php/zf1doctrine2/lib in /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php on line 185
 [Fri Apr 29 17:44:29 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'ZendX_Doctrine2_Exception' with message 'No Doctrine2 'proxyDir' option was given, but is required.' in /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php:185\nStack trace:\n#0 /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php(100): ZendX_Doctrine2_EntityManagerFactory->_createEntityManager()\n#1 /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php(44): ZendX_Doctrine2_EntityManagerFactory->createEntityManager()\n#2 /Users/ferdous/Projects/php/zf1doctrine2/library/Zend/Application/Bootstrap/BootstrapAbstract.php(681): ZendX_Doctrine2_Application_Resource_Entitymanagerfactory->init()\n#3 /Users/ferdous/Projects/php/zf1doctrine2/library/Zend/Application/Bootstrap/BootstrapAbstract.php(624): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('entitymanagerfa...')\n#4 /Users/ferdous/Projects/php/zf1doctrine2/lib in /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Doctrine2/Application/Resource/Entitymanagerfactory.php on line 185
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:00:35 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:01:05 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:03 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:20 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:22 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18, referer: http://zf.local/
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Application.php): failed to open stream: No such file or directory in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Application.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Projects/php/zf1doctrine2/public/index.php on line 18
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:02:23 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Notice:  Undefined variable: cache in /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php on line 46, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:25, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application.php:355, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:584, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:620, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initZFDebug() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:667, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function getBackend() on a non-object in /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php on line 46, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:25, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application.php:355, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:584, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:620, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initZFDebug() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:667, referer: http://zf.local/
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Notice:  Undefined variable: cache in /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php on line 46
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:25
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application.php:355
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:584
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:620
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initZFDebug() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:667
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function getBackend() on a non-object in /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php on line 46
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:25
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application.php:355
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:584
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:620
+[Fri Apr 29 18:09:26 2011] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initZFDebug() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:667
+[Fri Apr 29 19:02:35 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/js/jqeury, referer: http://zf.local/
+[Fri Apr 29 19:02:35 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:02:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:02:41 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/js/jqeury, referer: http://zf.local/
+[Fri Apr 29 19:02:42 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:02:53 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/js/jqeury, referer: http://zf.local/js/jqeury
+[Fri Apr 29 19:02:53 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:02:57 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:03:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/js/jqeury, referer: http://zf.local/
+[Fri Apr 29 19:03:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:03:22 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/js/jqeury, referer: http://zf.local/
+[Fri Apr 29 19:03:22 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:03:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:03:34 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/js/jqeury, referer: http://zf.local/
+[Fri Apr 29 19:03:34 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:03:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/js/jqeury, referer: http://zf.local/
+[Fri Apr 29 19:03:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:03:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:03:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:05:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:05:43 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 19:05:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:08:50 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:15:08 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/Users, referer: http://zf.local/
+[Fri Apr 29 21:15:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:15:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:15:42 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:15:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:16:20 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'Zend_Loader_PluginLoader_Exception' with message 'Plugin by name 'JQueryUi' was not found in the registry; used paths:\nZendX_JQuery_View_Helper_: ZendX/JQuery/View/Helper/\nZend_View_Helper_: Zend/View/Helper/:/Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/helpers/' in /Users/ferdous/Library/php/zf/library/Zend/Loader/PluginLoader.php:412\nStack trace:\n#0 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(1174): Zend_Loader_PluginLoader->load('JQueryUi')\n#1 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(610): Zend_View_Abstract->_getPlugin('helper', 'jQueryUi')\n#2 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(336): Zend_View_Abstract->getHelper('jQueryUi')\n#3 /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/layout.phtml(6): Zend_View_Abstract->__call('jQueryUi', Array)\n#4 /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/layout.phtml(6): Zend_View->jQueryU in /Users/ferdous/Library/php/zf/library/Zend/Loader/PluginLoader.php on line 412, referer: http://zf.local/
+[Fri Apr 29 21:16:20 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:17:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:19:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:19:29 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:21:13 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:26:04 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:27:12 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:30:21 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:30:27 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:31:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:32:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:32:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:33:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP Notice:  Undefined variable: view in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 2, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   7. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:523, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/HelperBroker.php:277, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   9. Zend_Controller_Action_Helper_ViewRenderer->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:957, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:918, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  11. Zend_View_Abstract->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:897, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  12. Zend_View->_run() /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php:880, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  13. include() /Users/ferdous/Library/php/zf/library/Zend/View.php:108, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function datePicker() on a non-object in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 2, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   7. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:523, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/HelperBroker.php:277, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP   9. Zend_Controller_Action_Helper_ViewRenderer->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:957, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:918, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  11. Zend_View_Abstract->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:897, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  12. Zend_View->_run() /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php:880, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] PHP  13. include() /Users/ferdous/Library/php/zf/library/Zend/View.php:108, referer: http://zf.local/
+[Fri Apr 29 21:34:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function datePicker() in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 2, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   7. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:523, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/HelperBroker.php:277, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP   9. Zend_Controller_Action_Helper_ViewRenderer->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:957, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP  10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:918, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP  11. Zend_View_Abstract->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:897, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP  12. Zend_View->_run() /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php:880, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] PHP  13. include() /Users/ferdous/Library/php/zf/library/Zend/View.php:108, referer: http://zf.local/
+[Fri Apr 29 21:35:12 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:35:32 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:35:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:36:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:36:04 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:36:07 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:36:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 21:36:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:36:42 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:36:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:51:30 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'Zend_Application_Bootstrap_Exception' with message 'Invalid method "headTitle"' in /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:603\nStack trace:\n#0 /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php(34): Zend_Application_Bootstrap_BootstrapAbstract->__call('headTitle', Array)\n#1 /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php(34): Bootstrap->headTitle()\n#2 /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initViewSettings()\n#3 /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('viewsettings')\n#4 /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)\n#5 /Users/ferdous/Library/php/zf/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstra in /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php on line 603
+[Fri Apr 29 22:51:31 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:51:54 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'Zend_Application_Bootstrap_Exception' with message 'Invalid method "baseUrl"' in /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:603\nStack trace:\n#0 /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php(36): Zend_Application_Bootstrap_BootstrapAbstract->__call('baseUrl', Array)\n#1 /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php(36): Bootstrap->baseUrl()\n#2 /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php(667): Bootstrap->_initViewSettings()\n#3 /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php(620): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('viewsettings')\n#4 /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php(584): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)\n#5 /Users/ferdous/Library/php/zf/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bo in /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php on line 603
+[Fri Apr 29 22:51:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:52:15 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'Zend_View_Exception' with message 'script 'header' not found in path (/Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/:/Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/:/Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/)' in /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php:980\nStack trace:\n#0 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(876): Zend_View_Abstract->_script('header')\n#1 /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/layout.phtml(13): Zend_View_Abstract->render('header')\n#2 /Users/ferdous/Library/php/zf/library/Zend/View.php(108): include('/Users/ferdous/...')\n#3 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(880): Zend_View->_run('/Users/ferdous/...')\n#4 /Users/ferdous/Library/php/zf/library/Zend/Layout.php(796): Zend_View_Abstract->render('layout.phtml')\n#5 /Users/ferdous/Library/php/zf/librar in /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php on line 980
+[Fri Apr 29 22:52:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:52:38 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:55:33 2011] [error] [client 127.0.0.1] PHP Fatal error:  Uncaught exception 'Zend_View_Exception' with message 'script '_header.phtml' not found in path (/Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/:/Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/:/Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/)' in /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php:980\nStack trace:\n#0 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(876): Zend_View_Abstract->_script('_header.phtml')\n#1 /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/layouts/scripts/layout.phtml(13): Zend_View_Abstract->render('_header.phtml')\n#2 /Users/ferdous/Library/php/zf/library/Zend/View.php(108): include('/Users/ferdous/...')\n#3 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(880): Zend_View->_run('/Users/ferdous/...')\n#4 /Users/ferdous/Library/php/zf/library/Zend/Layout.php(796): Zend_View_Abstract->render('layout.phtml')\n#5 /Users/ferdous/ in /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php on line 980
+[Fri Apr 29 22:55:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:56:04 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:57:03 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:58:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:58:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 22:59:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/images/logo.png, referer: http://zf.local/
+[Fri Apr 29 22:59:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:03:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:04:12 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/images/logo.png, referer: http://zf.local/
+[Fri Apr 29 23:04:12 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:05:03 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/images/logo.png
+[Fri Apr 29 23:05:03 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:06:03 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:06:08 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:07:27 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:07:59 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:08:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:09:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:10:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:18:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:20:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:24:42 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:26:34 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:27:34 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:28:45 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:33:31 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:55:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function limit() on a non-object in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/blog/models/Dao/Post.php on line 18
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] PHP   8. Blog_Model_Dao_Post->getAllPosts() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/controllers/IndexController.php:14
+[Fri Apr 29 23:58:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Fri Apr 29 23:59:08 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:04:57 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:05:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:05:58 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:06:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:07:08 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:07:51 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:08:32 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:10:13 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:10:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:13:08 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:13:46 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:14:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:16:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:18:20 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:19:00 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:19:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:20:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:25:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:25:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:25:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:25:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:25:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:25:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/login
+[Sat Apr 30 00:25:50 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:26:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:26:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:26:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:26:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:26:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:26:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:26:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:27:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:27:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:27:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:27:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:27:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:27:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/user, referer: http://zf.local/user/index/login
+[Sat Apr 30 00:27:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:28:05 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:29:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:31:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:32:05 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:33:43 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:34:53 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 19
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:36:05 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 24
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:36:56 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 24
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:38:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP Notice:  Use of undefined constant User_Form_Login - assumed 'User_Form_Login' in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:41:11 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:42:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Forms_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:44:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:45:14 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:46:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Form_Login' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 18
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 00:50:07 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:53:56 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:55:25 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:55:37 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:56:04 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:56:40 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:57:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:57:28 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:58:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:59:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 00:59:24 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 01:02:38 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 01:02:41 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 01:02:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 01:04:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 01:04:21 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 01:58:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:00:11 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'Model_User' not found in /Users/ferdous/Projects/php/zf1doctrine2/library/ZendX/Auth/Adapter.php on line 40, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   8. Zend_Auth->authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php:23, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] PHP   9. ZendX_Auth_Adapter->authenticate() /Users/ferdous/Library/php/zf/library/Zend/Auth.php:117, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:00:40 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP Fatal error:  Using $this when not in object context in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Dao/Auth.php on line 25, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   8. Zend_Auth->authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php:23, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP   9. User_Model_Auth_Adapter->authenticate() /Users/ferdous/Library/php/zf/library/Zend/Auth.php:117, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:47 2011] [error] [client 127.0.0.1] PHP  10. User_Model_Dao_Auth::authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Auth/Adapter.php:38, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:04:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP Fatal error:  Using $this when not in object context in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Dao/Auth.php on line 25, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   8. Zend_Auth->authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php:23, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP   9. User_Model_Auth_Adapter->authenticate() /Users/ferdous/Library/php/zf/library/Zend/Auth.php:117, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] PHP  10. User_Model_Dao_Auth::authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Auth/Adapter.php:38, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:08:43 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP Fatal error:  Using $this when not in object context in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Dao/User.php on line 22, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   8. Zend_Auth->authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php:23, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP   9. User_Model_Auth_Adapter->authenticate() /Users/ferdous/Library/php/zf/library/Zend/Auth.php:117, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] PHP  10. User_Model_Dao_User::authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Auth/Adapter.php:38, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:12:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP Fatal error:  Cannot access private property User_Model_User::$password in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Dao/User.php on line 28, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   8. Zend_Auth->authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php:23, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP   9. User_Model_Auth_Adapter->authenticate() /Users/ferdous/Library/php/zf/library/Zend/Auth.php:117, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] PHP  10. User_Model_Dao_User->authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Auth/Adapter.php:39, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:15:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:16:46 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:17:41 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:18:01 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:18:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:18:25 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:19:52 2011] [error] [client 127.0.0.1] Unknown, 4096: Object of class User_Model_User could not be converted to string in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 73
+[Sat Apr 30 02:19:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:20:19 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined method User_Model_User::getResult() in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 73
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->secretAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 02:21:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:21:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP Fatal error:  Cannot access private property User_Model_User::$username in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 73
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->secretAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 02:22:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP Fatal error:  Cannot access protected property User_Model_User::$username in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php on line 73
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->secretAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513
+[Sat Apr 30 02:23:00 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:23:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:24:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:33:28 2011] [info] [client 127.0.0.1] found %2f (encoded '/') in URI (decoded='/user/index//user/index/login'), returning 404
+[Sat Apr 30 02:33:28 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:34:03 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:34:08 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:34:13 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] Notice: Undefined property: User_Model_Dao_User::$WRONG_PW in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Auth/Adapter.php on line 41, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Model_Dao_Auth' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Auth/Adapter.php on line 43, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   7. User_IndexController->loginAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   8. Zend_Auth->authenticate() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/IndexController.php:23, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] PHP   9. User_Model_Auth_Adapter->authenticate() /Users/ferdous/Library/php/zf/library/Zend/Auth.php:117, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:34:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:36:17 2011] [error] [client 127.0.0.1] Notice: Undefined property: User_Model_Dao_User::$WRONG_PW in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/models/Auth/Adapter.php on line 41, referer: http://zf.local/user/index/login
+[Sat Apr 30 02:36:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:36:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:37:05 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:37:11 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:41:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:44:03 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:44:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:45:11 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:46:36 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:46:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:47:13 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:48:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:54:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:55:20 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:55:26 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:57:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:57:37 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:58:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 02:59:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:02:56 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:03:31 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:05:29 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:05:58 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:06:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:06:28 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:06:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:07:27 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:08:11 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:09:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:09:56 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:10:05 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:10:14 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:10:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:11:28 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:12:51 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:13:29 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:15:13 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:15:26 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:15:31 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:15:40 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:16:20 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:16:22 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:16:25 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:16:27 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:17:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:17:22 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:17:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:18:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:18:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:22:24 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:22:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:23:56 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:28:28 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:28:53 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function setSuffix() on a non-object in /Users/ferdous/Projects/php/zf1doctrine2/application/Bootstrap.php on line 41, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->bootstrap() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:25, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_BootstrapAbstract->bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application.php:355, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP   4. Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:584, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP   5. Zend_Application_Bootstrap_BootstrapAbstract->_executeResource() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:620, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] PHP   6. Bootstrap->_initViewSettings() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/BootstrapAbstract.php:667, referer: http://zf.local/user/login
+[Sat Apr 30 03:29:25 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:29:46 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:30:22 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:30:37 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:31:06 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:33:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:34:16 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:34:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:34:36 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:36:21 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:36:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:37:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:37:38 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:38:00 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:38:27 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:38:53 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined method ZendX_JQuery_View_Helper_JQuery_Container::datepicker() in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 1, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   7. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:523, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/HelperBroker.php:277, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP   9. Zend_Controller_Action_Helper_ViewRenderer->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:957, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP  10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:918, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP  11. Zend_View_Abstract->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:897, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP  12. Zend_View->_run() /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php:880, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] PHP  13. include() /Users/ferdous/Library/php/zf/library/Zend/View.php:108, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:36 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined method ZendX_JQuery_View_Helper_JQuery_Container::datePicker() in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 1, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   7. Zend_Controller_Action_HelperBroker->notifyPostDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:523, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   8. Zend_Controller_Action_Helper_ViewRenderer->postDispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/HelperBroker.php:277, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP   9. Zend_Controller_Action_Helper_ViewRenderer->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:957, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP  10. Zend_Controller_Action_Helper_ViewRenderer->renderScript() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:918, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP  11. Zend_View_Abstract->render() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php:897, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP  12. Zend_View->_run() /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php:880, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] PHP  13. include() /Users/ferdous/Library/php/zf/library/Zend/View.php:108, referer: http://zf.local/user/login
+[Sat Apr 30 03:41:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:42:11 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:43:41 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:46:10 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:47:25 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:47:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:48:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:49:07 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:50:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:50:59 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:52:45 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:53:22 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:54:01 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:54:36 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:55:12 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:55:25 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:56:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 03:57:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 04:08:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 05:31:32 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:00:45 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:00:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:03:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Auth_Adapter' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/LoginController.php on line 17, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] PHP   7. User_LoginController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class 'User_Auth_Adapter' not found in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/controllers/LoginController.php on line 17, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] PHP   7. User_LoginController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sat Apr 30 15:03:58 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:18:41 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:18:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:20:57 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:55:24 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:56:51 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:58:31 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:58:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:58:41 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:58:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 15:59:05 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:29 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:32 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:34 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:35 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:36 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:37 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:37 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 16:13:38 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:01:50 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:01:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:01:55 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:08:22 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:08:24 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:08:26 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:08:28 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:08:29 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:08:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 19:08:31 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP Fatal error:  Using $this when not in object context in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Tmsecure.php on line 79, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] PHP   8. Tms_Tmsecure::getDomains() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/controllers/IndexController.php:21, referer: http://zf.local/user/login
+[Sat Apr 30 23:38:20 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:39:59 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:40:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:41:43 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:42:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:42:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:43:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:43:34 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sat Apr 30 23:44:00 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class Tms_Service_Domain contains 2 abstract methods and must therefore be declared abstract or implement the remaining methods (Tms_Service_Abstract::setClient, Tms_Service_Abstract::getClient) in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Service/Domain.php on line 4, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   8. Zend_Loader_Autoloader::autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP   9. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP  10. Zend_Loader_Autoloader->_autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP  11. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP  12. Zend_Loader::loadClass() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP  13. Zend_Loader::loadFile() /Users/ferdous/Library/php/zf/library/Zend/Loader.php:82, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] PHP  14. include_once() /Users/ferdous/Library/php/zf/library/Zend/Loader.php:134, referer: http://zf.local/user/login
+[Sun May 01 00:08:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:30:06 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:30:10 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to protected Tms_Service_Domain::__construct() from context 'Default_IndexController' in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/controllers/IndexController.php on line 21, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 00:37:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:38:12 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:38:50 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined method Tms_Service_Domain::restGet() in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Service/Domain.php on line 31, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] PHP   8. Tms_Service_Domain->getDomains() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/controllers/IndexController.php:22, referer: http://zf.local/user/login
+[Sun May 01 00:42:15 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to a member function restGet() on a non-object in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Service/Domain.php on line 31, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] PHP   8. Tms_Service_Domain->getDomains() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/controllers/IndexController.php:22, referer: http://zf.local/user/login
+[Sun May 01 00:42:50 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:43:18 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP Fatal error:  Class Tms_Service_Domain contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (Tms_Service_Abstract::setUri) in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Service/Domain.php on line 4, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   8. Zend_Loader_Autoloader::autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP   9. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP  10. Zend_Loader_Autoloader->_autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP  11. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP  12. Zend_Loader::loadClass() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP  13. Zend_Loader::loadFile() /Users/ferdous/Library/php/zf/library/Zend/Loader.php:82, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] PHP  14. include_once() /Users/ferdous/Library/php/zf/library/Zend/Loader.php:134, referer: http://zf.local/user/login
+[Sun May 01 00:45:56 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined method Tms_Service_Domain::getUri() in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Service/Domain.php on line 33, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] PHP   8. Tms_Service_Domain->getDomains() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/controllers/IndexController.php:22, referer: http://zf.local/user/login
+[Sun May 01 00:46:20 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined method Tms_Service_Domain::getUri() in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Service/Domain.php on line 33, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] PHP   8. Tms_Service_Domain->getDomains() /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/controllers/IndexController.php:22, referer: http://zf.local/user/login
+[Sun May 01 00:47:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:48:02 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:48:41 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:49:21 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:51:33 2011] [error] [client 127.0.0.1] Unknown, 4096: Object of class Tms_Service_Domain could not be converted to string in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 1, referer: http://zf.local/user/login
+[Sun May 01 00:51:33 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:51:58 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:52:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 00:53:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:14:14 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP Fatal error:  Abstract function Tms_Service_Abstract::initClient() cannot contain body in /Users/ferdous/Projects/php/zf1doctrine2/library/Tms/Service/Abstract.php on line 22, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->run() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:26, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   3. Zend_Application_Bootstrap_Bootstrap->run() /Users/ferdous/Library/php/zf/library/Zend/Application.php:366, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   4. Zend_Controller_Front->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php:97, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   5. Zend_Controller_Dispatcher_Standard->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php:954, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   6. Zend_Controller_Action->dispatch() /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php:295, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   7. Default_IndexController->indexAction() /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php:513, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   8. Zend_Loader_Autoloader::autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:0, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP   9. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  10. Zend_Loader_Autoloader->_autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  11. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  12. Zend_Loader::loadClass() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  13. Zend_Loader::loadFile() /Users/ferdous/Library/php/zf/library/Zend/Loader.php:82, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  14. include_once() /Users/ferdous/Library/php/zf/library/Zend/Loader.php:134, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  15. Zend_Loader_Autoloader::autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:0, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  16. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  17. Zend_Loader_Autoloader->_autoload() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:124, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  18. call_user_func() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  19. Zend_Loader::loadClass() /Users/ferdous/Library/php/zf/library/Zend/Loader/Autoloader.php:473, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] PHP  20. Zend_Loader::loadFile() /Users/ferdous/Library/php/zf/library/Zend/Loader.php:82, referer: http://zf.local/user/login
+[Sun May 01 01:17:47 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:21:09 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:22:03 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:23:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:23:56 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:26:04 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:31:00 2011] [error] [client 127.0.0.1] Notice: Undefined index: title in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 5, referer: http://zf.local/user/login
+[Sun May 01 01:31:00 2011] [error] [client 127.0.0.1] Notice: Undefined index: title in /Users/ferdous/Projects/php/zf1doctrine2/application/modules/default/views/scripts/index/index.phtml on line 5, referer: http://zf.local/user/login
+[Sun May 01 01:31:00 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:31:32 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:31:35 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:31:54 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:33:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Loader/Autoloader.php): failed to open stream: No such file or directory in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24, referer: http://zf.local/user/login
+[Sun May 01 01:36:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Loader/Autoloader.php): failed to open stream: No such file or directory in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP Stack trace:, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24, referer: http://zf.local/user/login
+[Sun May 01 01:36:52 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Loader/Autoloader.php): failed to open stream: No such file or directory in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24
+[Sun May 01 01:37:19 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP Warning:  require_once(Zend/Loader/Autoloader.php): failed to open stream: No such file or directory in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP Fatal error:  require_once(): Failed opening required 'Zend/Loader/Autoloader.php' (include_path='/Users/ferdous/Projects/php/zf1doctrine2/library:.:/usr/local/PEAR:/usr/local/bin//PEAR:/usr/local/php/pear/') in /Users/ferdous/Library/php/zf/library/Zend/Application.php on line 80
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP Stack trace:
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP   1. {main}() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:0
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] PHP   2. Zend_Application->__construct() /Users/ferdous/Projects/php/zf1doctrine2/public/index.php:24
+[Sun May 01 01:38:10 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 02:13:39 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 04:39:30 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 04:39:38 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 04:39:40 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 04:39:42 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 04:39:44 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 04:39:46 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 15:19:14 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 16:11:24 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 16:41:38 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 16:42:42 2011] [error] [client 127.0.0.1] Warning: Exception caught by form: Method getType does not exist\nStack Trace:\n#0 /Users/ferdous/Library/php/zf/library/Zend/Form/Decorator/ViewHelper.php(92): Zend_Form->__call('getType', Array)\n#1 /Users/ferdous/Library/php/zf/library/Zend/Form/Decorator/ViewHelper.php(92): User_Form_Login->getType()\n#2 /Users/ferdous/Library/php/zf/library/Zend/Form/Decorator/ViewHelper.php(233): Zend_Form_Decorator_ViewHelper->getHelper()\n#3 /Users/ferdous/Library/php/zf/library/Zend/Form.php(2908): Zend_Form_Decorator_ViewHelper->render('')\n#4 /Users/ferdous/Library/php/zf/library/Zend/Form.php(2924): Zend_Form->render()\n#5 /Users/ferdous/Projects/php/zf1doctrine2/application/modules/user/views/scripts/login/index.phtml(2): Zend_Form->__toString()\n#6 /Users/ferdous/Library/php/zf/library/Zend/View.php(108): include('/Users/ferdous/...')\n#7 /Users/ferdous/Library/php/zf/library/Zend/View/Abstract.php(880): Zend_View->_run('/Users/ferdous/...')\n#8 /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php(897): Zend_View_Abstract->render('login/index.pht...')\n#9 /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php(918): Zend_Controller_Action_Helper_ViewRenderer->renderScript('login/index.pht...', NULL)\n#10 /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/Helper/ViewRenderer.php(957): Zend_Controller_Action_Helper_ViewRenderer->render()\n#11 /Users/ferdous/Library/php/zf/library/Zend/Controller/Action/HelperBroker.php(277): Zend_Controller_Action_Helper_ViewRenderer->postDispatch()\n#12 /Users/ferdous/Library/php/zf/library/Zend/Controller/Action.php(523): Zend_Controller_Action_HelperBroker->notifyPostDispatch()\n#13 /Users/ferdous/Library/php/zf/library/Zend/Controller/Dispatcher/Standard.php(295): Zend_Controller_Action->dispatch('indexAction')\n#14 /Users/ferdous/Library/php/zf/library/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))\n#15 /Users/ferdous/Library/php/zf/library/Zend/Application/Bootstrap/Bootstrap.php(97): Zend_Controller_Front->dispatch()\n#16 /Users/ferdous/Library/php/zf/library/Zend/Application.php(366): Zend_Application_Bootstrap_Bootstrap->run()\n#17 /Users/ferdous/Projects/php/zf1doctrine2/public/index.php(26): Zend_Application->run()\n#18 {main} in /Users/ferdous/Library/php/zf/library/Zend/Form.php on line 2929
+[Sun May 01 16:42:43 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 16:43:37 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 18:23:49 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 18:24:43 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 19:21:17 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 19:21:20 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 19:21:23 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 19:21:27 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico
+[Sun May 01 19:39:48 2011] [error] [client 127.0.0.1] File does not exist: /Users/ferdous/Projects/php/zf1doctrine2/public/favicon.ico

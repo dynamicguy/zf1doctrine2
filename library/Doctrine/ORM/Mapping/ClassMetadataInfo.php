@@ -598,9 +598,10 @@ class ClassMetadataInfo
     /**
      * Gets the mapping of an association.
      *
+     * @see ClassMetadataInfo::$associationMappings
      * @param string $fieldName  The field name that represents the association in
      *                           the object model.
-     * @return Doctrine\ORM\Mapping\AssociationMapping  The mapping.
+     * @return array The mapping.
      */
     public function getAssociationMapping($fieldName)
     {
@@ -642,8 +643,8 @@ class ClassMetadataInfo
     protected function _validateAndCompleteFieldMapping(array &$mapping)
     {
         // Check mandatory fields
-        if ( ! isset($mapping['fieldName'])) {
-            throw MappingException::missingFieldName($this->name, $mapping);
+        if ( ! isset($mapping['fieldName']) || strlen($mapping['fieldName']) == 0) {
+            throw MappingException::missingFieldName($this->name);
         }
         if ( ! isset($mapping['type'])) {
             // Default to string
@@ -669,6 +670,10 @@ class ClassMetadataInfo
 
         // Complete id mapping
         if (isset($mapping['id']) && $mapping['id'] === true) {
+            if ($this->versionField == $mapping['fieldName']) {
+                throw MappingException::cannotVersionIdField($this->name, $mapping['fieldName']);
+            }
+
             if ( ! in_array($mapping['fieldName'], $this->identifier)) {
                 $this->identifier[] = $mapping['fieldName'];
             }
@@ -706,8 +711,8 @@ class ClassMetadataInfo
         }
 
         // Mandatory: fieldName, targetEntity
-        if ( ! isset($mapping['fieldName'])) {
-            throw MappingException::missingFieldName();
+        if ( ! isset($mapping['fieldName']) || strlen($mapping['fieldName']) == 0) {
+            throw MappingException::missingFieldName($this->name);
         }
         if ( ! isset($mapping['targetEntity'])) {
             throw MappingException::missingTargetEntity($mapping['fieldName']);
@@ -831,8 +836,17 @@ class ClassMetadataInfo
     {
         $mapping = $this->_validateAndCompleteAssociationMapping($mapping);
         if ($mapping['isOwningSide']) {
-            $sourceShortName = strtolower(substr($mapping['sourceEntity'], strrpos($mapping['sourceEntity'], '\\') + 1));
-            $targetShortName = strtolower(substr($mapping['targetEntity'], strrpos($mapping['targetEntity'], '\\') + 1));
+            if (strpos($mapping['sourceEntity'], '\\') !== false) {
+                $sourceShortName = strtolower(substr($mapping['sourceEntity'], strrpos($mapping['sourceEntity'], '\\') + 1));
+            } else {
+                $sourceShortName = strtolower($mapping['sourceEntity']);
+            }
+            if (strpos($mapping['targetEntity'], '\\') !== false) {
+                $targetShortName = strtolower(substr($mapping['targetEntity'], strrpos($mapping['targetEntity'], '\\') + 1));
+            } else {
+                $targetShortName = strtolower($mapping['targetEntity']);
+            }
+            
             // owning side MUST have a join table
             if ( ! isset($mapping['joinTable']['name'])) {
                 $mapping['joinTable']['name'] = $sourceShortName .'_' . $targetShortName;
@@ -935,6 +949,7 @@ class ClassMetadataInfo
     public function setIdentifier(array $identifier)
     {
         $this->identifier = $identifier;
+        $this->isIdentifierComposite = (count($this->identifier) > 1);
     }
 
     /**
@@ -1441,6 +1456,13 @@ class ClassMetadataInfo
             if ( ! isset($columnDef['fieldName'])) {
                 $columnDef['fieldName'] = $columnDef['name'];
             }
+            if ( ! isset($columnDef['type'])) {
+                $columnDef['type'] = "string";
+            }
+            if (in_array($columnDef['type'], array("boolean", "array", "object", "datetime", "time", "date"))) {
+                throw MappingException::invalidDiscriminatorColumnType($this->name, $columnDef['type']);
+            }
+
             $this->discriminatorColumn = $columnDef;
         }
     }

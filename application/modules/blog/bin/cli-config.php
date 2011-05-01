@@ -1,11 +1,9 @@
 <?php
 
-/**
- * @todo set library path
- * @todo find and replace your current module name. such as "blog"
- */
-if (!defined('LIB_PATH'))
-    define('LIB_PATH', '/Users/ferdous/Projects/php/zf1doctrine2/library');
+if (!defined('LIB_PATH')){
+    $path = realpath(__DIR__);    
+    define('LIB_PATH', dirname(dirname(dirname(dirname($path)))).'/library');
+}
 
 require_once LIB_PATH . '/Doctrine/Common/ClassLoader.php';
 

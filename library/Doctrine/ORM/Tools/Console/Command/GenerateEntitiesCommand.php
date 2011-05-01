@@ -52,39 +52,56 @@ class GenerateEntitiesCommand extends Console\Command\Command
         ->setDescription('Generate entity classes and method stubs from your mapping information.')
         ->setDefinition(array(
             new InputOption(
-                'filter', null, InputOption::PARAMETER_REQUIRED | InputOption::PARAMETER_IS_ARRAY,
+                'filter', null, InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
                 'A string pattern used to match entities that should be processed.'
             ),
             new InputArgument(
                 'dest-path', InputArgument::REQUIRED, 'The path to generate your entity classes.'
             ),
             new InputOption(
-                'generate-annotations', null, InputOption::PARAMETER_OPTIONAL,
+                'generate-annotations', null, InputOption::VALUE_OPTIONAL,
                 'Flag to define if generator should generate annotation metadata on entities.', false
             ),
             new InputOption(
-                'generate-methods', null, InputOption::PARAMETER_OPTIONAL,
+                'generate-methods', null, InputOption::VALUE_OPTIONAL,
                 'Flag to define if generator should generate stub methods on entities.', true
             ),
             new InputOption(
-                'regenerate-entities', null, InputOption::PARAMETER_OPTIONAL,
+                'regenerate-entities', null, InputOption::VALUE_OPTIONAL,
                 'Flag to define if generator should regenerate entity if it exists.', false
             ),
             new InputOption(
-                'update-entities', null, InputOption::PARAMETER_OPTIONAL,
+                'update-entities', null, InputOption::VALUE_OPTIONAL,
                 'Flag to define if generator should only update entity if it exists.', true
             ),
             new InputOption(
-                'extend', null, InputOption::PARAMETER_OPTIONAL,
+                'extend', null, InputOption::VALUE_OPTIONAL,
                 'Defines a base class to be extended by generated entity classes.'
             ),
             new InputOption(
-                'num-spaces', null, InputOption::PARAMETER_OPTIONAL,
+                'num-spaces', null, InputOption::VALUE_OPTIONAL,
                 'Defines the number of indentation spaces', 4
             )
         ))
         ->setHelp(<<<EOT
 Generate entity classes and method stubs from your mapping information.
+
+If you use the <comment>--update-entities</comment> or <comment>--regenerate-entities</comment> flags your exisiting
+code gets overwritten. The EntityGenerator will only append new code to your
+file and will not delete the old code. However this approach may still be prone
+to error and we suggest you use code repositories such as GIT or SVN to make
+backups of your code.
+
+It makes sense to generate the entity code if you are using entities as Data
+Access Objects only and dont put much additional logic on them. If you are
+however putting much more logic on the entities you should refrain from using
+the entity-generator and code your entities manually.
+
+<error>Important:</error> Even if you specified Inheritance options in your
+XML or YAML Mapping files the generator cannot generate the base and
+child classes for you correctly, because it doesn't know which
+class is supposed to extend which. You have to adjust the entity
+code manually for inheritance to work!
 EOT
         );
     }
@@ -96,7 +113,8 @@ EOT
     {
         $em = $this->getHelper('em')->getEntityManager();
         
-        $cmf = new DisconnectedClassMetadataFactory($em);
+        $cmf = new DisconnectedClassMetadataFactory();
+        $cmf->setEntityManager($em);
         $metadatas = $cmf->getAllMetadata();
         $metadatas = MetadataFilter::filter($metadatas, $input->getOption('filter'));
         

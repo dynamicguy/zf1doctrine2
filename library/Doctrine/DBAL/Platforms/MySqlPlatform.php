@@ -109,9 +109,25 @@ class MySqlPlatform extends AbstractPlatform
         return 'SHOW INDEX FROM ' . $table;
     }
 
-    public function getListTableIndexesSQL($table)
+    /**
+     * Two approaches to listing the table indexes. The information_schema is 
+     * prefered, because it doesn't cause problems with SQL keywords such as "order" or "table".
+     * 
+     * @param string $table
+     * @param string $currentDatabase
+     * @return string
+     */
+    public function getListTableIndexesSQL($table, $currentDatabase = null)
     {
-        return 'SHOW INDEX FROM ' . $table;
+        if ($currentDatabase) {
+            return "SELECT TABLE_NAME AS `Table`, NON_UNIQUE AS Non_Unique, INDEX_NAME AS Key_name, ".
+                   "SEQ_IN_INDEX AS Seq_in_index, COLUMN_NAME AS Column_Name, COLLATION AS Collation, ".
+                   "CARDINALITY AS Cardinality, SUB_PART AS Sub_Part, PACKED AS Packed, " .
+                   "NULLABLE AS `Null`, INDEX_TYPE AS Index_Type, COMMENT AS Comment " . 
+                   "FROM information_schema.STATISTICS WHERE TABLE_NAME = '" . $table . "' AND TABLE_SCHEMA = '" . $currentDatabase . "'";
+        } else {
+            return 'SHOW INDEX FROM ' . $table;
+        }
     }
 
     public function getListViewsSQL($database)
@@ -152,19 +168,8 @@ class MySqlPlatform extends AbstractPlatform
      *
      * @params array $field
      */
-    public function getVarcharTypeDeclarationSQL(array $field)
+    protected function getVarcharTypeDeclarationSQLSnippet($length, $fixed)
     {
-        if ( ! isset($field['length'])) {
-            if (array_key_exists('default', $field)) {
-                $field['length'] = $this->getVarcharMaxLength();
-            } else {
-                $field['length'] = false;
-            }
-        }
-
-        $length = ($field['length'] <= $this->getVarcharMaxLength()) ? $field['length'] : false;
-        $fixed = (isset($field['fixed'])) ? $field['fixed'] : false;
-
         return $fixed ? ($length ? 'CHAR(' . $length . ')' : 'CHAR(255)')
                 : ($length ? 'VARCHAR(' . $length . ')' : 'VARCHAR(255)');
     }
@@ -258,17 +263,6 @@ class MySqlPlatform extends AbstractPlatform
     {
         return true;
     }
-    
-    /**
-     * Whether the platform supports savepoints. MySql does not.
-     *
-     * @return boolean
-     * @override
-     */
-    public function supportsSavepoints()
-    {
-        return false;
-    }
 
     public function getShowDatabasesSQL()
     {
@@ -277,7 +271,7 @@ class MySqlPlatform extends AbstractPlatform
     
     public function getListTablesSQL()
     {
-        return 'SHOW FULL TABLES WHERE Table_type = "BASE TABLE"';
+        return "SHOW FULL TABLES WHERE Table_type = 'BASE TABLE'";
     }
 
     public function getListTableColumnsSQL($table)
@@ -421,23 +415,23 @@ class MySqlPlatform extends AbstractPlatform
         }
 
         foreach ($diff->addedColumns AS $fieldName => $column) {
-            $queryParts[] = 'ADD ' . $this->getColumnDeclarationSQL($column->getName(), $column->toArray());
+            $queryParts[] = 'ADD ' . $this->getColumnDeclarationSQL($column->getQuotedName($this), $column->toArray());
         }
 
         foreach ($diff->removedColumns AS $column) {
-            $queryParts[] =  'DROP ' . $column->getName();
+            $queryParts[] =  'DROP ' . $column->getQuotedName($this);
         }
 
         foreach ($diff->changedColumns AS $columnDiff) {
             /* @var $columnDiff Doctrine\DBAL\Schema\ColumnDiff */
             $column = $columnDiff->column;
             $queryParts[] =  'CHANGE ' . ($columnDiff->oldColumnName) . ' '
-                    . $this->getColumnDeclarationSQL($column->getName(), $column->toArray());
+                    . $this->getColumnDeclarationSQL($column->getQuotedName($this), $column->toArray());
         }
 
         foreach ($diff->renamedColumns AS $oldColumnName => $column) {
             $queryParts[] =  'CHANGE ' . $oldColumnName . ' '
-                    . $this->getColumnDeclarationSQL($column->getName(), $column->toArray());
+                    . $this->getColumnDeclarationSQL($column->getQuotedName($this), $column->toArray());
         }
 
         $sql = array();
@@ -531,13 +525,13 @@ class MySqlPlatform extends AbstractPlatform
     public function getDropIndexSQL($index, $table=null)
     {
         if($index instanceof \Doctrine\DBAL\Schema\Index) {
-            $index = $index->getName();
+            $index = $index->getQuotedName($this);
         } else if(!is_string($index)) {
             throw new \InvalidArgumentException('MysqlPlatform::getDropIndexSQL() expects $index parameter to be string or \Doctrine\DBAL\Schema\Index.');
         }
         
         if($table instanceof \Doctrine\DBAL\Schema\Table) {
-            $table = $table->getName();
+            $table = $table->getQuotedName($this);
         } else if(!is_string($table)) {
             throw new \InvalidArgumentException('MysqlPlatform::getDropIndexSQL() expects $table parameter to be string or \Doctrine\DBAL\Schema\Table.');
         }
@@ -554,7 +548,7 @@ class MySqlPlatform extends AbstractPlatform
     public function getDropTableSQL($table)
     {
         if ($table instanceof \Doctrine\DBAL\Schema\Table) {
-            $table = $table->getName();
+            $table = $table->getQuotedName($this);
         } else if(!is_string($table)) {
             throw new \InvalidArgumentException('MysqlPlatform::getDropTableSQL() expects $table parameter to be string or \Doctrine\DBAL\Schema\Table.');
         }
@@ -575,11 +569,6 @@ class MySqlPlatform extends AbstractPlatform
     public function getName()
     {
         return 'mysql';
-    }
-
-    public function createsExplicitIndexForForeignKeys()
-    {
-        return true;
     }
 
     public function getReadLockSQL()
@@ -607,12 +596,17 @@ class MySqlPlatform extends AbstractPlatform
             'datetime'      => 'datetime',
             'timestamp'     => 'datetime',
             'time'          => 'time',
-            'float'         => 'decimal',
-            'double'        => 'decimal',
-            'real'          => 'decimal',
+            'float'         => 'float',
+            'double'        => 'float',
+            'real'          => 'float',
             'decimal'       => 'decimal',
             'numeric'       => 'decimal',
             'year'          => 'date',
         );
+    }
+
+    public function getVarcharMaxLength()
+    {
+        return 65535;
     }
 }

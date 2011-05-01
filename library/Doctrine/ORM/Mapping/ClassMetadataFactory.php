@@ -74,11 +74,9 @@ class ClassMetadataFactory
     private $initialized = false;
     
     /**
-     * Creates a new factory instance that uses the given metadata driver implementation.
-     *
-     * @param $driver  The metadata driver to use.
+     * @param EntityManager $$em
      */
-    public function __construct(EntityManager $em)
+    public function setEntityManager(EntityManager $em)
     {
         $this->em = $em;
     }
@@ -262,15 +260,19 @@ class ClassMetadataFactory
             $class = $this->newClassMetadataInstance($className);
 
             if ($parent) {
-                $class->setInheritanceType($parent->inheritanceType);
-                $class->setDiscriminatorColumn($parent->discriminatorColumn);
+                if (!$parent->isMappedSuperclass) {
+                    $class->setInheritanceType($parent->inheritanceType);
+                    $class->setDiscriminatorColumn($parent->discriminatorColumn);
+                }
                 $class->setIdGeneratorType($parent->generatorType);
                 $this->addInheritedFields($class, $parent);
                 $this->addInheritedRelations($class, $parent);
                 $class->setIdentifier($parent->identifier);
                 $class->setVersioned($parent->isVersioned);
                 $class->setVersionField($parent->versionField);
-                $class->setDiscriminatorMap($parent->discriminatorMap);
+                if (!$parent->isMappedSuperclass) {
+                    $class->setDiscriminatorMap($parent->discriminatorMap);
+                }
                 $class->setLifecycleCallbacks($parent->lifecycleCallbacks);
                 $class->setChangeTrackingPolicy($parent->changeTrackingPolicy);
             }
@@ -282,10 +284,6 @@ class ClassMetadataFactory
                 throw MappingException::reflectionFailure($className, $e);
             }
 
-            // Verify & complete identifier mapping
-            if ( ! $class->identifier && ! $class->isMappedSuperclass) {
-                throw MappingException::identifierRequired($className);
-            }
             if ($parent && ! $parent->isMappedSuperclass) {
                 if ($parent->isIdGeneratorSequence()) {
                     $class->setSequenceGeneratorDefinition($parent->sequenceGeneratorDefinition);
@@ -309,8 +307,13 @@ class ClassMetadataFactory
             $class->setParentClasses($visited);
 
             if ($this->evm->hasListeners(Events::loadClassMetadata)) {
-                $eventArgs = new \Doctrine\ORM\Event\LoadClassMetadataEventArgs($class);
+                $eventArgs = new \Doctrine\ORM\Event\LoadClassMetadataEventArgs($class, $this->em);
                 $this->evm->dispatchEvent(Events::loadClassMetadata, $eventArgs);
+            }
+
+            // Verify & complete identifier mapping
+            if ( ! $class->identifier && ! $class->isMappedSuperclass) {
+                throw MappingException::identifierRequired($className);
             }
 
             // verify inheritance
@@ -379,6 +382,13 @@ class ClassMetadataFactory
     private function addInheritedRelations(ClassMetadata $subClass, ClassMetadata $parentClass)
     {
         foreach ($parentClass->associationMappings as $field => $mapping) {
+            if ($parentClass->isMappedSuperclass) {
+                if ($mapping['type'] & ClassMetadata::TO_MANY && !$mapping['isOwningSide']) {
+                    throw MappingException::illegalToManyAssocationOnMappedSuperclass($parentClass->name, $field);
+                }
+                $mapping['sourceEntity'] = $subClass->name;
+            }
+
             //$subclassMapping = $mapping;
             if ( ! isset($mapping['inherited']) && ! $parentClass->isMappedSuperclass) {
                 $mapping['inherited'] = $parentClass->name;

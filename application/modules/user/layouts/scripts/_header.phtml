@@ -1,0 +1,52 @@
+            <div id="tmsecure-logo" class="grid_2">
+                <a href="/">
+                    <img src="<?php echo $this->BaseUrl(); ?>/images/logo.png" alt="tmsecure">
+                </a>
+            </div>
+            <div class="grid_6">
+                <h2>TM Secure™ for Brand Enforcement Solutions</h2>
+                <ul class="menu">
+                     <li><a href="{{ path('homepage') }}">Home</a></li>
+                     <li><a href="{{ path('homepage') }}">My lists</a></li>
+                     <li><a href="{{ path('homepage') }}">My keywords</a></li>
+                </ul>
+                <form id="tmsecure-search" method="GET" action="http://tmsecure.com/search">
+                    <input name="q" id="tmsecure-search-field" type="search" placeholder="Add new Brand Keyword" class="medium_txt">
+                    <input type="submit" class="tmsecure-button-grey" value="OK" />
+                </form>
+            </div>
+            <div id="tmsecure-utils" class="right grid_4">
+                <p>Currently logged in as: 
+                 <?php if($this->user): ?>
+                <strong><?php echo $this->user->getUsername(); ?></strong>
+                <ul class="menu">
+                    <li><a href="{{ path('homepage') }}">Account Info & Billing</a></li>
+                    <li><a href="{{ path('homepage') }}">Preferences</a></li>
+                    <li><a href="/user/logout">Log out</a></li>
+                </ul>
+                        
+                <?php else: ?>
+                <strong>Anonymous</strong>
+                <ul class="menu">
+                    <li><a href="/user/login">Login</a></li>
+                </ul>
+                <?php endif; ?>
+                </p>
+            </div>
+            <div class="clear">&nbsp;</div>
+
+            <div class="grid_8">
+                <div class="padded">
+                    Welcome back, 
+                    <strong><?php if($this->user): ?>
+                    <?php echo $this->user->getUsername(); ?>
+                    <?php else: ?>
+                    Guest
+                    <?php endif; ?></strong>!
+                </div>
+            </div>
+            <div class="right grid_4">
+                <div class="padded">customize</div>
+            </div>
+            <div class="clear">&nbsp;</div> 
+            
