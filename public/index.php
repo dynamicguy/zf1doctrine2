@@ -1,5 +1,13 @@
 <?php
 
+function d($data, $ret = false)
+{
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
+    ($ret) ? die : '';
+}
+
 // Define path to application directory
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
