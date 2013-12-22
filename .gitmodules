@@ -1,6 +1,6 @@
 [submodule "library/Zend"]
 	path = library/Zend
 	url = git://github.com/dmelo/Zend-1.11.git
-[submodule "library/Doctrine/doctrine2-orm"]
-	path = library/Doctrine/doctrine2-orm
+[submodule "library/vendor/Doctrine"]
+	path = library/vendor/Doctrine
 	url = git://github.com/doctrine/doctrine2.git
